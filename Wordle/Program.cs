@@ -83,7 +83,7 @@ class Program
     {
         var informations = await ReadAndGetInformationAsync();
 
-        var words = GoodWords.Where(word => !word.Any(letter => informations.Where(x => x.IsAbsent).Select(x => x.letter).Contains(letter)));.ToList();
+        var words = GoodWords.Where(word => !word.Any(letter => informations.Where(x => x.IsAbsent).Select(x => x.letter).Contains(letter)));
         words = words.Where(word => informations.Where(y => y.isThisPosition).All(infoLetter => word.Contains(infoLetter.letter) && word.IndexOf(infoLetter.letter) == infoLetter.position)).ToList();
         words = words.Where(word => informations.Where(y => !y.isThisPosition).All(infoLetter => word.Contains(infoLetter.letter) && word.IndexOf(infoLetter.letter) != infoLetter.position)).ToList();
         return words;
