@@ -4,10 +4,8 @@ using System.Threading.Tasks;
 
 class Program
 {
-
     //todo improve find best word 
     //get ordered list of high freq words
-    //ad ability to cache bad words and not use them
 
     private static IPage page;
     private static IKeyboard keyboard;
@@ -81,6 +79,16 @@ class Program
 
         return bestWords;
     }
+    private static async Task<IEnumerable<string>> GetAcceptableWordsAsync()
+    {
+        var informations = await ReadAndGetInformationAsync();
+
+        var words = GoodWords.Where(word => !word.Any(letter => informations.Where(x => x.IsAbsent).Select(x => x.letter).Contains(letter)));.ToList();
+        words = words.Where(word => informations.Where(y => y.isThisPosition).All(infoLetter => word.Contains(infoLetter.letter) && word.IndexOf(infoLetter.letter) == infoLetter.position)).ToList();
+        words = words.Where(word => informations.Where(y => !y.isThisPosition).All(infoLetter => word.Contains(infoLetter.letter) && word.IndexOf(infoLetter.letter) != infoLetter.position)).ToList();
+        return words;
+    }
+
 
     private static List<char> GetOrderedMostCommonLetterPosition(List<string> words, int n)
     {
@@ -147,8 +155,7 @@ class Program
             await ReadAndCacheResultsAsync();
         }
     }
-
-    private static async Task<IEnumerable<string>> GetAcceptableWordsAsync()
+    private static async Task<List<Guess>> ReadAndGetInformationAsync()
     {
         var informations = new List<Guess>();
         foreach (var result in Results.Where(x => x.Evaluation == Evaluation.Correct))
@@ -166,13 +173,17 @@ class Program
                 informations.Add(new Guess(result.Position % 5, false, result.Letter));
             }
         }
-        var badLetters = Results.Where(x => x.Evaluation == Evaluation.Absent).Select(x => x.Letter).ToList();
+        foreach (var result in Results.Where(x => x.Evaluation == Evaluation.Absent))
+        {
+            if (!informations.Any(x => x.position == -1 && x.letter == result.Letter))
+            {
+                informations.Add(new Guess(-1, false, result.Letter));
+            }
+        }
 
-        var words = GoodWords.Where(word => !word.Any(letter => badLetters.Contains(letter))).ToList();
-        words = words.Where(word => informations.Where(y => y.isThisPosition).All(infoLetter => word.Contains(infoLetter.letter) && word.IndexOf(infoLetter.letter) == infoLetter.position)).ToList();
-        words = words.Where(word => informations.Where(y => !y.isThisPosition).All(infoLetter => word.Contains(infoLetter.letter) && word.IndexOf(infoLetter.letter) != infoLetter.position)).ToList();
-        return words;
+        return informations;
     }
+
 
     private static async Task CheckIfWinAsync(List<Guess> nextGuests)
     {
@@ -255,6 +266,7 @@ class Program
 }
 public record struct Guess(int position, bool isThisPosition, char letter)
 {
+    public bool IsAbsent => position == -1;
 }
 public record struct KeyValue(string Key, string Value)
 {
