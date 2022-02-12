@@ -83,9 +83,27 @@ class Program
     {
         var informations = await ReadAndGetInformationAsync();
 
-        var words = GoodWords.Where(word => !word.Any(letter => informations.Where(x => x.IsAbsent).Select(x => x.letter).Contains(letter)));
-        words = words.Where(word => informations.Where(y => y.isThisPosition).All(infoLetter => word.Contains(infoLetter.letter) && word.IndexOf(infoLetter.letter) == infoLetter.position)).ToList();
-        words = words.Where(word => informations.Where(y => !y.isThisPosition).All(infoLetter => word.Contains(infoLetter.letter) && word.IndexOf(infoLetter.letter) != infoLetter.position)).ToList();
+        var absents = informations.Where(x => x.IsAbsent && !informations.Any(y => !y.IsAbsent && y.letter == x.letter));
+        var absentsAndPresents = informations.Where(x => x.IsAbsent && informations.Any(y => !y.IsAbsent && y.letter == x.letter));
+
+        var words = GoodWords.Where(word =>
+                        !word.Any(letter => absents.Select(x => x.letter).Contains(letter))).ToList();
+
+        foreach (var info in absentsAndPresents)
+        {
+            var count = informations.Count(x => x.letter == info.letter);
+            words = words.Where(word => word.Count(x => x == info.letter) < count).ToList();
+        }
+
+        words = words.Where(word =>
+                    informations.Where(y => y.isThisPosition)
+                       .All(infoLetter => word.Contains(infoLetter.letter)
+                                       && word[infoLetter.position] == infoLetter.letter)).ToList();
+
+        words = words.Where(word =>
+                    informations.Where(y => !y.isThisPosition && !y.IsAbsent)
+                      .All(infoLetter => word.Contains(infoLetter.letter)
+                                       && word[infoLetter.position] != infoLetter.letter)).ToList();
         return words;
     }
 
@@ -259,9 +277,7 @@ class Program
     private static async Task TypeWord(string word)
     {
         await page.TypeAsync("#board", word);
-        await Task.Delay(1000);
         await keyboard.PressAsync("Enter");
-        await Task.Delay(5000);
     }
 }
 public record struct Guess(int position, bool isThisPosition, char letter)
