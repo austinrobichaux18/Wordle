@@ -1,4 +1,5 @@
-﻿using Microsoft.Playwright;
+﻿using Common;
+using Microsoft.Playwright;
 using Newtonsoft.Json;
 using System.Threading.Tasks;
 
@@ -163,7 +164,7 @@ class Program
                 NotWords.Add(word);
             }
             var newJson = JsonConvert.SerializeObject(NotWords);
-            await File.WriteAllTextAsync("C:\\Users\\arobi\\source\\repos\\Wordle\\Wordle\\NotWords.json", newJson);
+            await File.WriteAllTextAsync(Files.NotWords, newJson);
             InitLists();
 
             await keyboard.PressAsync("Backspace");
@@ -207,7 +208,7 @@ class Program
     {
         if (nextGuests.Count() == 5)
         {
-            var text = File.ReadAllText("C:\\Users\\arobi\\source\\repos\\Wordle\\Wordle\\WordsWon.json");
+            var text = File.ReadAllText(Files.WordsWon);
             var values = JsonConvert.DeserializeObject<List<string>>(text);
             var wonWord = string.Join("", nextGuests.OrderBy(x => x.position).Select(x => x.letter).ToList());
             if (!values.Any(x => x == wonWord))
@@ -215,7 +216,7 @@ class Program
                 values.Add(wonWord);
             }
             var newJson = JsonConvert.SerializeObject(values);
-            await File.WriteAllTextAsync("C:\\Users\\arobi\\source\\repos\\Wordle\\Wordle\\WordsWon.json", newJson);
+            await File.WriteAllTextAsync(Files.WordsWon, newJson);
         }
     }
 
@@ -239,10 +240,10 @@ class Program
 
     private static void InitLists()
     {
-        var words = File.ReadAllText(@"AllFiveLetterWords.json");
+        var words = File.ReadAllText(Files.AllFiveLetterWords);
         Words = JsonConvert.DeserializeObject<List<KeyValue>>(words).Select(x => x.Key);
 
-        var notWords = File.ReadAllText(@"C:\\Users\\arobi\\source\\repos\\Wordle\\Wordle\\NotWords.json");
+        var notWords = File.ReadAllText(Files.NotWords);
         NotWords = JsonConvert.DeserializeObject<List<string>>(notWords);
 
         BestWords = GetBestWords();
