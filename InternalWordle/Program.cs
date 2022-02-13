@@ -10,7 +10,9 @@ public class Program
         var iterationsToSolve = new List<int>();
         while (true)
         {
+            //GoalWord = "hazle";
             GoalWord = GetGoalWord();
+
             Console.WriteLine($"Game: {gamesPlayed}. GOAL WORD: " + GoalWord);
             var attempts = new List<string>();
             var isPlaying = true;
@@ -19,7 +21,7 @@ public class Program
             var allResults = new List<GuessResult>();
             while (isPlaying)
             {
-                var guessWord = iteration == 0 ? "house" : GetBestWord(allResults, algorithm);
+                var guessWord = GetBestWord(allResults, algorithm);
                 Console.WriteLine($"Iteration: {iteration}. Guess: " + guessWord);
                 attempts.Add(guessWord);
                 var result = Guess(guessWord, iteration);
@@ -30,7 +32,7 @@ public class Program
                 }
                 iteration++;
             }
-            //await Files.AddHistoryAsync(algorithm, GoalWord, iteration, attempts);
+            await Files.AddHistoryAsync(algorithm, GoalWord, iteration, attempts);
             Console.WriteLine($"WON in {iteration} iterations. Goal word: {GoalWord}");
             iterationsToSolve.Add(iteration);
             gamesPlayed++;
@@ -57,23 +59,39 @@ public class Program
             return results;
         }
         results.Add(new GuessResult(false, guessWord));
-        for (int i = 0; i < guessWord.Length; i++)
+        for (int position = 0; position < guessWord.Length; position++)
         {
-            var eval = GetEvaluation(GoalWord, guessWord, i, results);
-            results.Add(new GuessResult(false, null, guessWord[i], eval, i, iteration));
+            var eval = GetEvaluation(GoalWord, guessWord, position, results);
+            results.Add(new GuessResult(false, null, guessWord[position], eval, position, iteration));
+        }
+        foreach (var result in results.Skip(1))
+        {
+            var letterOccurances = GoalWord.Count(x => x == result.Letter);
+            var corrects = results.Count(x => x.Evaluation == Evaluation.Correct && x.Letter == result.Letter);
+            var presents = results.Count(x => x.Evaluation == Evaluation.Present && x.Letter == result.Letter);
+            var presentsToOverride = (corrects + presents) - letterOccurances;
+            if (presentsToOverride > 0)
+            {
+                for (int i = 0; i < presentsToOverride; i++)
+                {
+                    var last = results.Last(x => x.Evaluation == Evaluation.Present && x.Letter == result.Letter);
+                    last.Evaluation = Evaluation.Absent;
+                }
+            }
         }
         return results;
     }
 
-    private static Evaluation GetEvaluation(string goalWord, string guessWord, int i, List<GuessResult> results)
+    private static Evaluation GetEvaluation(string goalWord, string guessWord, int position, List<GuessResult> results)
     {
-        if (goalWord[i] == guessWord[i])
+        var letterOccurances = goalWord.Count(x => x == guessWord[position]);
+        var resultsNotAbsentLetterOccurances = results.Count(x => x.Letter == guessWord[position] && x.Evaluation != Evaluation.Absent);
+        if (goalWord[position] == guessWord[position])
         {
             return Evaluation.Correct;
         }
-        else if (goalWord.Any(x => guessWord[i] == x)
-              && (goalWord.Count(x => x == guessWord[i]) >
-                    results.Count(x => x.Letter == guessWord[i] && x.Evaluation != Evaluation.Absent)))
+        else if (goalWord.Any(x => guessWord[position] == x)
+              && letterOccurances > resultsNotAbsentLetterOccurances)
         {
             return Evaluation.Present;
         }
@@ -103,7 +121,7 @@ public class Program
         var presents = allResults.Where(result => result.Evaluation == Evaluation.Present).ToList();
         if (presents.Any())
         {
-            words = words.Where(x => presents.Any(result => x[result.Position] != result.Letter)).ToList();
+            words = words.Where(x => presents.All(result => x.Contains(result.Letter)&& x[result.Position] != result.Letter)).ToList();
         }
 
         var notAbsents = allResults.Where(result => result.Evaluation != Evaluation.Absent).ToList();
@@ -116,14 +134,6 @@ public class Program
         }
 
         var partialAbsents = absents.Where(x => notAbsents.Any(y => y.Letter == x.Letter));
-        //foreach (var item in absents.Where(x => notAbsents.Any(y => y.Letter == x.Letter)))
-        //{
-        //    if (!partialAbsents.Any(x=> x.Letter == item.Letter && x.Iteration == item.Iteration))
-        //    {
-        //        partialAbsents.Add(item);
-        //    }
-        //}
-        //TODO: partial absents are fucked 
         if (partialAbsents.Any())
         {
             foreach (var info in partialAbsents)
@@ -131,21 +141,6 @@ public class Program
                 var count = allResults.Count(x => x.Letter == info.Letter);
                 words = words.Where(word => word.Count(x => x == info.Letter) < count).ToList();
             }
-            //foreach (var partialAbsent in partialAbsents)
-            //{
-            //    var partialLetter = partialAbsent.Letter;
-            //    //var allowedAppearanceCount = notAbsents.Where(x => x.Letter == partialLetter )
-            //    //                .GroupBy(x => x.Iteration)
-            //    //                .OrderByDescending(x => x.Count())
-            //    //                .First().Count();
-            //    var temp = absents.Where(x => x.Letter == partialLetter);
-            //    var temp2 = temp.GroupBy(x => x.Iteration);
-            //    var temp3 = temp2.OrderByDescending(x => x.Count());
-            //    var temp4 = temp3.First();
-            //    var temp5 = temp4.Count();
-
-            //    words = words.Where(x => x.Count(y => y == partialLetter) <= temp5).ToList();
-            //}
         }
         return words.First();
     }
@@ -153,7 +148,6 @@ public class Program
     private static string GetGoalWord()
     {
         var words = Files.GetWords();
-        //return words[2];
         var index = new Random().Next(words.Count());
         return words[index];
     }
