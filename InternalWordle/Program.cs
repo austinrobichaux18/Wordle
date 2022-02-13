@@ -154,6 +154,11 @@ public class Program
                 words = words.Where(word => word.Count(x => x == info.Letter) < count).ToList();
             }
         }
+        //Can now return words for all acceptable words
+
+        //Order applicable words based on distinct letters to avoid redundant checks
+        words = words.Select(x => new { distinctLetters = x.Distinct().Count(), word = x }).OrderByDescending(x => x.distinctLetters).Select(x => x.word).ToList();
+
         return words.First();
     }
 
