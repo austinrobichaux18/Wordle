@@ -157,11 +157,22 @@ public class Program
         //Can now return words for all acceptable words
 
         //Order applicable words based on distinct letters to avoid redundant checks
-        words = words.Select(x => new { distinctLetters = x.Distinct().Count(), word = x }).OrderByDescending(x => x.distinctLetters).Select(x => x.word).ToList();
+        return words.Select(x => new { score = ScoreWord(x), word = x }).OrderByDescending(x => x.score).Select(x => x.word).First();
 
-        return words.First();
     }
-
+    private static double ScoreWord(string word)
+    {
+        //frequencies go from 1-57 ish. 
+        var frequencies = Files.GetLetterFrequency();
+        //distinct letters get 100 points
+        double score = word.Distinct().Count() * 100;
+        foreach (var x in word)
+        {
+            var temp = frequencies.First(y => y.Key == x.ToString().ToUpper());
+            score += double.Parse(temp.Value);
+        }
+        return score;
+    }
     private static string GetGoalWord()
     {
         var words = Files.GetWords();

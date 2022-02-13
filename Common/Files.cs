@@ -9,9 +9,11 @@ namespace Common
         public static string AllNotWordleAccepted => "C:\\Users\\arobi\\source\\repos\\Wordle\\Common\\NotWords.json";
         public static string WordsWon => "C:\\Users\\arobi\\source\\repos\\Wordle\\Common\\WordsWon.json";
         public static string History => "C:\\Users\\arobi\\source\\repos\\Wordle\\Common\\History.json";
+        public static string AllLetterFrequency => "C:\\Users\\arobi\\source\\repos\\Wordle\\Common\\LetterFrequency.json";
 
         public static List<string> FiveLetterWords { get; set; }
         public static List<string> NotWordleAccepted { get; set; }
+        public static List<KeyValue> LetterFrequency { get; private set; }
 
         public static async Task AddHistoryAsync(Algorithm Algortihm, string GoalWord, int AttemptCount, List<string> Attempts)
         {
@@ -21,7 +23,9 @@ namespace Common
             var newJson = JsonConvert.SerializeObject(values);
             await File.WriteAllTextAsync(History, newJson);
         }
-
+        public static List<KeyValue> GetLetterFrequency() =>
+                   LetterFrequency = LetterFrequency
+                       ?? JsonConvert.DeserializeObject<List<KeyValue>>(File.ReadAllText(AllLetterFrequency)).ToList();
         public static List<string> GetNotAcceptedWordleWords() =>
                 NotWordleAccepted = NotWordleAccepted
                     ?? JsonConvert.DeserializeObject<List<string>>(File.ReadAllText(AllNotWordleAccepted)).ToList();

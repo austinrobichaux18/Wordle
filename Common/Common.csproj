@@ -10,6 +10,7 @@
     <None Remove="AllFiveLetterWords.json" />
     <None Remove="AllWords.json" />
     <None Remove="History.json" />
+    <None Remove="LetterFrequency.json" />
     <None Remove="NotWords.json" />
     <None Remove="WordsWon.json" />
   </ItemGroup>
@@ -22,6 +23,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="History.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LetterFrequency.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="NotWords.json">
