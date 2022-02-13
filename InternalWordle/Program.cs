@@ -1,5 +1,6 @@
 ﻿using Common;
 using InternalWordle;
+using Newtonsoft.Json;
 
 public class Program
 {
@@ -10,7 +11,7 @@ public class Program
         var iterationsToSolve = new List<int>();
         while (true)
         {
-            //GoalWord = "hazle";
+            //GoalWord = "pilar";
             GoalWord = GetGoalWord();
 
             Console.WriteLine($"Game: {gamesPlayed}. GOAL WORD: " + GoalWord);
@@ -43,7 +44,7 @@ public class Program
                 {
                     total += item;
                 }
-                var avg = total / gamesPlayed;
+                var avg = (double)total / (double)gamesPlayed;
             }
         }
     }
@@ -119,9 +120,20 @@ public class Program
         }
 
         var presents = allResults.Where(result => result.Evaluation == Evaluation.Present).ToList();
+        foreach (var present in presents.ToList())
+        {
+            //this is when you have 2 of the same letter, both in the wrong spot. One marked as Present and one Absent. 
+            //This will send both to presents to ensure it doesnt check the 2 known bad spots already
+            var absentOccurances = allResults.Where(x => x.Iteration == present.Iteration && x.Letter == present.Letter && x.Evaluation == Evaluation.Absent);
+            foreach (var item in absentOccurances)
+            {
+                presents.Add(item);
+            }
+        }
+
         if (presents.Any())
         {
-            words = words.Where(x => presents.All(result => x.Contains(result.Letter)&& x[result.Position] != result.Letter)).ToList();
+            words = words.Where(x => presents.All(result => x.Contains(result.Letter) && x[result.Position] != result.Letter)).ToList();
         }
 
         var notAbsents = allResults.Where(result => result.Evaluation != Evaluation.Absent).ToList();
