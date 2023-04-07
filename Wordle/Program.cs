@@ -164,7 +164,7 @@ class Program
                 NotWords.Add(word);
             }
             var newJson = JsonConvert.SerializeObject(NotWords);
-            await File.WriteAllTextAsync(Files.NotWords, newJson);
+            await File.WriteAllTextAsync(Files.AllNotWordleAccepted, newJson);
             InitLists();
 
             await keyboard.PressAsync("Backspace");
@@ -243,7 +243,7 @@ class Program
         var words = File.ReadAllText(Files.AllFiveLetterWords);
         Words = JsonConvert.DeserializeObject<List<KeyValue>>(words).Select(x => x.Key);
 
-        var notWords = File.ReadAllText(Files.NotWords);
+        var notWords = File.ReadAllText(Files.AllNotWordleAccepted);
         NotWords = JsonConvert.DeserializeObject<List<string>>(notWords);
 
         BestWords = GetBestWords();
