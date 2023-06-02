@@ -70,6 +70,12 @@ public class Program
             Console.WriteLine();
 
             Console.WriteLine($"Going to page ({index}) ({urls[index]})" + GetTime(time, timer.ElapsedMilliseconds));
+            if(urls[index].Contains("ideas") || urls[index].Contains("topic"))
+            {
+                //todo process idea/topic pages?
+                Console.WriteLine($"Not a recipe page ({index}) ({urls[index]})" + GetTime(time, timer.ElapsedMilliseconds));
+                return;
+            }
             await page.GotoAsync(urls[index]);
             Console.WriteLine($"Got to page ({index}) ({urls[index]})" + GetTime(time, timer.ElapsedMilliseconds));
             Console.WriteLine();
@@ -119,7 +125,7 @@ public class Program
         for (int i = 0; i < await aLocator.CountAsync(); i++)
         {
             var recipeUrl = await aLocator.Nth(i).GetAttributeAsync("href");
-            if (recipeUrl.StartsWith("https") && !recipeUrl.Contains("ideas") && !recipeUrl.Contains("user") && recipeUrl.Contains("recipe") && !urls.Contains(recipeUrl))
+            if (recipeUrl.StartsWith("https")  && !recipeUrl.Contains("user") && recipeUrl.Contains("recipe") && !urls.Contains(recipeUrl))
             {
                 urls.Add(recipeUrl);
             }
