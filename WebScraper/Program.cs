@@ -1,5 +1,6 @@
 ﻿using Microsoft.Playwright;
 using Newtonsoft.Json;
+using System.Diagnostics;
 using System.Text.RegularExpressions;
 
 public class Program
@@ -20,7 +21,7 @@ public class Program
         await using var browser = await playwright.Webkit.LaunchAsync();
         var page = await browser.NewPageAsync();
 
-        var urls = new List<string> { "https://www.food.com/recipe/strawberry-rhubarb-dump-cake-408694" };
+        var urls = JsonConvert.DeserializeObject<List<string>>(await File.ReadAllTextAsync("C:\\Users\\arobi\\source\\repos\\Wordle\\WebScraper\\Urls.json"));
         var results = new List<Result>();
 
         //while (true)
@@ -33,12 +34,14 @@ public class Program
     {
         try
         {
+            var timer = new Stopwatch();
+            timer.Start();
             await page.GotoAsync(urls[index]);
 
             var result = new Result();
             result.Url = page.Url;
             Console.WriteLine("Looting: " + result.Url);
-            result.Title = (await page.TitleAsync()).Replace("- Food.com", "").Replace("Recipe","").Trim();
+            result.Title = (await page.TitleAsync()).Replace("- Food.com", "").Replace("Recipe", "").Trim();
 
             var item = new Item();
             await GetInstructionsAsync(page, item);
@@ -49,12 +52,14 @@ public class Program
 
             await GetOtherRecipeUrlsAsync(page, urls);
 
-            if (results.Count > 10)
+            if (results.Count > 5)
             {
                 File.WriteAllText("C:\\Users\\arobi\\source\\repos\\Wordle\\WebScraper\\Results.json", JsonConvert.SerializeObject(results));
                 File.WriteAllText("C:\\Users\\arobi\\source\\repos\\Wordle\\WebScraper\\Urls.json", JsonConvert.SerializeObject(urls));
                 return;
             }
+            timer.Stop();
+            Console.WriteLine((double)(timer.ElapsedMilliseconds / 1000));
             await GetResultsAsync(page, urls, results, index + 1);
         }
         catch (Exception e)
@@ -142,15 +147,25 @@ public class Program
 
         for (int i = 0; i < split.Count / 2; i++)
         {
-            var innerSplit = item.Ingredients[i].Two.Split(" ").ToList();
-            if (innerSplit.Count == 1)
             {
-                continue;
+                var innerSplit = item.Ingredients[i].Two.Split(" ").ToList();
+                if (innerSplit.Count == 1)
+                {
+                    continue;
+                }
+
+                item.Ingredients[i].One += " " + innerSplit[0];
+                innerSplit.RemoveAt(0);
+                item.Ingredients[i].Two = string.Join(" ", innerSplit);
             }
 
-            item.Ingredients[i].One += " " + innerSplit[0];
-            innerSplit.RemoveAt(0);
-            item.Ingredients[i].Two = string.Join(" ", innerSplit);
+            while (item.Ingredients[i].One.Contains("(") && !item.Ingredients[i].One.Contains(")"))
+            {
+                var innerSplit = item.Ingredients[i].Two.Split(" ").ToList();
+                item.Ingredients[i].One += " " + innerSplit[0];
+                innerSplit.RemoveAt(0);
+                item.Ingredients[i].Two = string.Join(" ", innerSplit);
+            }
         }
     }
     public class Result
