@@ -30,10 +30,10 @@ public class Program
                 //tasks.Add(GetResultsAsync(null, urls, results, i * batchSize + j));
             }
             await Task.WhenAll(tasks);
-            if (i > 0 && i % 10 == 0)
+            if (i > 0 && i % 5 == 0)
             {
                 File.WriteAllText("C:\\Users\\arobi\\source\\repos\\Wordle\\WebScraper\\Results.json", JsonConvert.SerializeObject(results));
-                File.WriteAllText("C:\\Users\\arobi\\source\\repos\\Wordle\\WebScraper\\Urls.json", JsonConvert.SerializeObject(urls));
+                //File.WriteAllText("C:\\Users\\arobi\\source\\repos\\Wordle\\WebScraper\\Urls.json", JsonConvert.SerializeObject(urls));
             }
         }
         File.WriteAllText("C:\\Users\\arobi\\source\\repos\\Wordle\\WebScraper\\Results.json", JsonConvert.SerializeObject(results));
@@ -70,7 +70,7 @@ public class Program
             Console.WriteLine();
 
             Console.WriteLine($"Going to page ({index}) ({urls[index]})" + GetTime(time, timer.ElapsedMilliseconds));
-            if(urls[index].Contains("ideas") || urls[index].Contains("topic"))
+            if (urls[index].Contains("ideas") || urls[index].Contains("topic"))
             {
                 //todo process idea/topic pages?
                 Console.WriteLine($"Not a recipe page ({index}) ({urls[index]})" + GetTime(time, timer.ElapsedMilliseconds));
@@ -95,20 +95,13 @@ public class Program
             await GetIngredientsAsync(page, item, index, time, timer);
             result.Items.Add(item);
             await GetImagesAsync(page, result, index, time, timer);
+            await GetFactsAsync(page, result, index, time, timer);
             results.Add(result);
 
             await GetOtherRecipeUrlsAsync(page, urls, index, time, timer);
 
-            //if (results.Count > 5)
-            //{
-            //    File.WriteAllText("C:\\Users\\arobi\\source\\repos\\Wordle\\WebScraper\\Results.json", JsonConvert.SerializeObject(results));
-            //    File.WriteAllText("C:\\Users\\arobi\\source\\repos\\Wordle\\WebScraper\\Urls.json", JsonConvert.SerializeObject(urls));
-            //    return;
-            //}
             timer.Stop();
             Console.WriteLine($"Done ({index}): " + GetTime(time, timer.ElapsedMilliseconds));
-            await page.CloseAsync();
-            //await GetResultsAsync(page, urls, results, index + 1);
         }
         catch (Exception e)
         {
@@ -116,6 +109,7 @@ public class Program
             Console.WriteLine(e.Message);
             Console.WriteLine();
         }
+        await page.CloseAsync();
     }
 
     private static async Task GetOtherRecipeUrlsAsync(IPage page, List<string> urls, int index, Time time, Stopwatch timer)
@@ -125,7 +119,7 @@ public class Program
         for (int i = 0; i < await aLocator.CountAsync(); i++)
         {
             var recipeUrl = await aLocator.Nth(i).GetAttributeAsync("href");
-            if (recipeUrl.StartsWith("https")  && !recipeUrl.Contains("user") && recipeUrl.Contains("recipe") && !urls.Contains(recipeUrl))
+            if (recipeUrl.StartsWith("https") && !recipeUrl.Contains("user") && recipeUrl.Contains("recipe") && !urls.Contains(recipeUrl))
             {
                 urls.Add(recipeUrl);
             }
@@ -172,6 +166,51 @@ public class Program
         Console.WriteLine($"Got Instructions ({index}): " + GetTime(time, timer.ElapsedMilliseconds));
         Console.WriteLine();
         item.Instructions = instructions.Split("\n").Where(x => !string.IsNullOrWhiteSpace(x)).Select(x => x.Replace("\r", "")).ToList();
+    }
+
+    private static async Task GetFactsAsync(IPage page, Result result, int index, Time time, Stopwatch timer)
+    {
+        Console.WriteLine($"Getting Facts ({index}): " + GetTime(time, timer.ElapsedMilliseconds));
+        var labelLocator = page.Locator(".facts__label");
+        var valueLocator = page.Locator(".facts__value");
+        for (int i = 0; i < await valueLocator.CountAsync(); i++)
+        {
+            var label = await labelLocator.Nth(i).InnerTextAsync();
+            var value = (await valueLocator.Nth(i).InnerTextAsync()).Replace("\n","");
+            if (label == "Serves:")
+            {
+                if (value.Contains("-"))
+                {
+                    //todo fix to do avg instead of min
+                    value = value.Split("-")[0];
+                }
+                if (int.TryParse(value, out var intResult))
+                {
+                    result.Servings = intResult;
+                }
+            }
+            if (label == "Ready In:")
+            {
+                var split = value.Split(" ");
+                int number = GetInt(split[0]);
+                if (split.Length > 1)
+                {
+                    number = GetInt(split[0]) * 60 + GetInt(split[1]);
+                }
+                else if (value.Trim().EndsWith("hr"))
+                {
+                    number = GetInt(value) * 60;
+                }
+                result.CookTimeMinutes = number;
+            }
+        }
+        Console.WriteLine($"Got Facts ({index}): " + GetTime(time, timer.ElapsedMilliseconds));
+        Console.WriteLine();
+
+    }
+    private static int GetInt(string str)
+    {
+        return int.Parse(string.Join("", str.Where(x => char.IsNumber(x))));
     }
 
     private static async Task GetIngredientsAsync(IPage page, Item item, int index, Time time, Stopwatch timer)
@@ -231,6 +270,8 @@ public class Program
     public class Result
     {
         public string Url { get; set; }
+        public int Servings { get; set; }
+        public int CookTimeMinutes { get; set; }
         public string Title { get; set; }
         public List<string> Images { get; set; } = new List<string>();
         public List<Item> Items { get; set; } = new List<Item>();
