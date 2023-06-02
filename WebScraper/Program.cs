@@ -37,7 +37,8 @@ public class Program
 
             var result = new Result();
             result.Url = page.Url;
-            result.Title = (await page.TitleAsync()).Replace("  - Food.com","");
+            Console.WriteLine("Looting: " + result.Url);
+            result.Title = (await page.TitleAsync()).Replace("- Food.com", "").Replace("Recipe","").Trim();
 
             var item = new Item();
             await GetInstructionsAsync(page, item);
@@ -50,8 +51,8 @@ public class Program
 
             if (results.Count > 10)
             {
-                var json = JsonConvert.SerializeObject(results);
-                File.WriteAllText("C:\\Users\\arobi\\source\\repos\\Wordle\\WebScraper\\Results.json", json);
+                File.WriteAllText("C:\\Users\\arobi\\source\\repos\\Wordle\\WebScraper\\Results.json", JsonConvert.SerializeObject(results));
+                File.WriteAllText("C:\\Users\\arobi\\source\\repos\\Wordle\\WebScraper\\Urls.json", JsonConvert.SerializeObject(urls));
                 return;
             }
             await GetResultsAsync(page, urls, results, index + 1);
@@ -83,7 +84,7 @@ public class Program
         for (int i = 0; i < await imgLocator.CountAsync(); i++)
         {
             var imgUrl = await imgLocator.Nth(i).GetAttributeAsync("src");
-            if (imgUrl.Contains("avatar") || imgUrl.Contains("promo") || imgUrl.Contains("yahoo"))
+            if (imgUrl.Contains("avatar") || imgUrl.Contains("promo") || imgUrl.Contains("yahoo") || imgUrl.Contains("facebook") || imgUrl.Contains("google") || imgUrl.Contains("static"))
             {
                 continue;
             }
@@ -108,7 +109,7 @@ public class Program
     {
         var instructionsElement = await page.WaitForSelectorAsync(".direction-list");
         var instructions = await instructionsElement.InnerTextAsync();
-        item.Instructions = instructions.Split("\n").Where(x => !string.IsNullOrWhiteSpace(x)).ToList();
+        item.Instructions = instructions.Split("\n").Where(x => !string.IsNullOrWhiteSpace(x)).Select(x => x.Replace("\r", "")).ToList();
     }
 
     private static async Task GetIngredientsAsync(IPage page, Item item)
@@ -121,12 +122,15 @@ public class Program
         {
             item.Ingredients.Add(new DoubleString());
         }
-        item.Ingredients.Add(new DoubleString());
+        if (split.Count % 2 == 1)
+        {
+            item.Ingredients.Add(new DoubleString());
+        }
 
         for (int i = 0; i < split.Count; i++)
         {
             var temp = item.Ingredients.First(x => string.IsNullOrWhiteSpace(x.One) || string.IsNullOrWhiteSpace(x.Two));
-            if (string.IsNullOrWhiteSpace(temp.One))
+            if (string.IsNullOrWhiteSpace(temp.One) && split.Count != i + 1)
             {
                 temp.One = split[i];
             }
@@ -138,11 +142,15 @@ public class Program
 
         for (int i = 0; i < split.Count / 2; i++)
         {
-            var temp = item.Ingredients[i].Two.Split(" ").ToList();
+            var innerSplit = item.Ingredients[i].Two.Split(" ").ToList();
+            if (innerSplit.Count == 1)
+            {
+                continue;
+            }
 
-            item.Ingredients[i].One += " " + temp[0];
-            temp.RemoveAt(0);
-            item.Ingredients[i].Two = string.Join(" ", temp);
+            item.Ingredients[i].One += " " + innerSplit[0];
+            innerSplit.RemoveAt(0);
+            item.Ingredients[i].Two = string.Join(" ", innerSplit);
         }
     }
     public class Result

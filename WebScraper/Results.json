@@ -1,673 +1,632 @@
 [
-	{
-		"Url": "https://www.food.com/recipe/strawberry-rhubarb-dump-cake-408694",
-		"Title": "Strawberry Rhubarb Dump Cake Recipe  - Food.com",
-		"Images": [
-			"https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_744,ar_5:4/v1/img/recipes/40/86/94/g3HQXLx8QJCbyhqeEa0h_strawberry-rhubarb-dump-cake-084.jpg",
-			"https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_20,ar_5:4/v1/img/recipes/40/86/94/2wwMxM4mRHmFqNLtxl7g_strawberry-rhubarb-dump-cake-057.jpg",
-			"https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_200,ar_3:2/v1/img/recipes/40/86/94/2wwMxM4mRHmFqNLtxl7g_strawberry-rhubarb-dump-cake-057.jpg",
-			"https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_20,ar_5:4/v1/img/recipes/40/86/94/kPYQgpyQ6yTb6L99SKKg_strawberry-rhubarb-dump-cake-107.jpg",
-			"https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_200,ar_3:2/v1/img/recipes/40/86/94/kPYQgpyQ6yTb6L99SKKg_strawberry-rhubarb-dump-cake-107.jpg",
-			"https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_20,ar_5:4/v1/img/recipes/40/86/94/ugYN9mtRRtChrhF9VCSM_strawberry-rhubarb-dump-cake-012.jpg",
-			"https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_200,ar_3:2/v1/img/recipes/40/86/94/ugYN9mtRRtChrhF9VCSM_strawberry-rhubarb-dump-cake-012.jpg",
-			"https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_20,ar_5:4/v1/img/recipes/40/86/94/picNQPjbC.jpg",
-			"https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_200,ar_3:2/v1/img/recipes/40/86/94/picNQPjbC.jpg",
-			"https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_328,ar_4:3/v1/img/recipes/60/50/1/zLXlRKywR86uMJQbCQb1_PEACH_COBBLER_DUMP_CAKE_024.jpg",
-			"https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_328,ar_4:3/v1/img/recipes/63/95/7/ys0zFF71R9GSAl81fCx3_DSC05563-2.jpg",
-			"https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_328,ar_4:3/v1/gk-static/gk/img/recipe-default-images/image-03.svg",
-			"https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_328,ar_4:3/v1/gk-static/gk/img/recipe-default-images/image-03.svg"
-		],
-		"Items": [
-			{
-				"Instructions": [
-					"Put ingredients in a buttered 9 x 12 x 2-inch pan in even layers in the order that they are given - DO NOT MIX.",
-					"Bake in a 350° oven for 1 hour."
-				],
-				"Ingredients": [
-					{
-						"One": "6 -8 cups",
-						"Two": "fresh rhubarb, or"
-					},
-					{
-						"One": "6 -8 cups",
-						"Two": "frozen rhubarb, thawed"
-					},
-					{
-						"One": "1 1⁄2 cups",
-						"Two": "granulated sugar"
-					},
-					{
-						"One": "6 ounces",
-						"Two": "strawberry Jell-O gelatin dessert"
-					},
-					{
-						"One": "1 white",
-						"Two": "cake mix (2 layer size)"
-					},
-					{
-						"One": "1 1⁄2 cups",
-						"Two": "water"
-					},
-					{
-						"One": "1⁄2 cup",
-						"Two": "butter or 1/2 cup margarine, melted"
-					},
-					{
-						"One": null,
-						"Two": null
-					}
-				]
-			}
-		]
-	},
-	{
-		"Url": "https://www.food.com/recipe/rhubarb-dump-cake-63957",
-		"Title": "Rhubarb Dump Cake Recipe  - Food.com",
-		"Images": [
-			"https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_744,ar_5:4/v1/img/recipes/63/95/7/ys0zFF71R9GSAl81fCx3_DSC05563-2.jpg",
-			"https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_20,ar_5:4/v1/img/recipes/63/95/7/whsAzKNTfKEAnmJ34mzG_DSC05561-2.jpg",
-			"https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_200,ar_3:2/v1/img/recipes/63/95/7/whsAzKNTfKEAnmJ34mzG_DSC05561-2.jpg",
-			"https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_20,ar_5:4/v1/img/recipes/63/95/7/RBV41LO8RdCSil7jF4lW_DSC05560-2.jpg",
-			"https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_200,ar_3:2/v1/img/recipes/63/95/7/RBV41LO8RdCSil7jF4lW_DSC05560-2.jpg",
-			"https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_20,ar_5:4/v1/img/recipes/63/95/7/picsMAhHx.jpg",
-			"https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_200,ar_3:2/v1/img/recipes/63/95/7/picsMAhHx.jpg",
-			"https://graph.facebook.com/v2.0/10205794362191230/picture?type=square",
-			"https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_328,ar_4:3/v1/img/recipes/26/37/0/bzwUWgTTGZ83fb1AbjMQ_CC%208%20-%20final_6.jpg",
-			"https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_328,ar_4:3/v1/img/recipes/60/50/1/zLXlRKywR86uMJQbCQb1_PEACH_COBBLER_DUMP_CAKE_024.jpg",
-			"https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_328,ar_4:3/v1/img/recipes/40/86/94/g3HQXLx8QJCbyhqeEa0h_strawberry-rhubarb-dump-cake-084.jpg",
-			"https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_328,ar_4:3/v1/gk-static/gk/img/recipe-default-images/image-03.svg"
-		],
-		"Items": [
-			{
-				"Instructions": [
-					"Preheat oven to 350 degrees.",
-					"Line the bottom of an ungreased 13x9x2-inch baking pan with the rhubarb.",
-					"Sprinkle sugar over the rhubarb.",
-					"Sprinkle dry raspberry gelatin, ( or strawberry gelatin ) which ever you prefer; over the sugar.",
-					"Next, sprinkle the cake mix over the gelatin.",
-					"Melt butter; pour over the cake mix.",
-					"Pour the 1 cup of water over cake mix.",
-					"Bake for 45 minutes.",
-					"Cool completely; then chill in refrigerator.",
-					"When ready to serve, invert onto plate.",
-					"Top with either vanilla ice cream or Cool Whip.",
-					"Serves 12 to 16.",
-					"Note: If using frozen rhubarb, reduce the amount of water to 1/2 cup.",
-					"This cake was baked in a gas oven.",
-					"If baking in an electric oven, you may need to increase baking time; depending upon oven and altitude.",
-					"Chef sheerkerry baked hers in an electric oven for 1 hour and 10 minutes."
-				],
-				"Ingredients": [
-					{
-						"One": "4 -5 cups",
-						"Two": "diced rhubarb"
-					},
-					{
-						"One": "3⁄4 cup",
-						"Two": "sugar"
-					},
-					{
-						"One": "1 (3",
-						"Two": "ounce) package raspberry gelatin powder or (3 ounce) package strawberry gelatin"
-					},
-					{
-						"One": "1 (18",
-						"Two": "1/2 ounce) box yellow cake mix (with pudding in the mix)"
-					},
-					{
-						"One": "1⁄2 cup",
-						"Two": "butter"
-					},
-					{
-						"One": "1 cup",
-						"Two": "water"
-					},
-					{
-						"One": "vanilla ice cream or cool whip dessert topping",
-						"Two": null
-					}
-				]
-			}
-		]
-	},
-	{
-		"Url": "https://www.food.com/recipe/rhubarb-dump-cake-91835",
-		"Title": "Box-Mix Rhubarb Dump Cake Recipe  - Food.com",
-		"Images": [
-			"https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_744,ar_5:4/v1/gk-static/gk/img/recipe-default-images/image-03.svg",
-			"https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_860,ar_3:2/v1/gk-static/gk/img/recipe-default-images/image-03.svg",
-			"https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_70,ar_1:1/v1/pickle_media1/media/rz_migration/29/Photo_Video_29063_medthumb_hor.jpg",
-			"https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_328,ar_4:3/v1/img/recipes/19/44/00/54Jim9iVTQkU7tkVebbK_chicken%20tenders%20SITE-2.jpg",
-			"https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_328,ar_4:3/v1/img/recipes/13/73/55/jBkDWsARRlK8ukbHlAgw_0S9A8687.jpg",
-			"https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_328,ar_4:3/v1/img/recipes/28/75/39/pic0iLJDD.jpg",
-			"https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_328,ar_4:3/v1/img/recipes/91/26/6/EEIklV6WRqiXKYfRVmzK_balsamic%2520chicken%2520pepper%2520onions%2520SITE-1.jpg"
-		],
-		"Items": [
-			{
-				"Instructions": [
-					"Arrange rhubarb in the bottom of a 9X13 inch pan.",
-					"Sprinkle Jello over rhubarb.",
-					"Sprinkle sugar over Jello.",
-					"Cover with Marshmallows.",
-					"Prepare cake mix using 2 eggs and the required amount of water called for on the cake mix.",
-					"DO NOT add the oil.",
-					"Spread cake batter over the marshmallows.",
-					"Bake at 350 degrees for 50-55 mins.",
-					"Serve warm with cool whip or ice-cream."
-				],
-				"Ingredients": [
-					{
-						"One": "5 cups",
-						"Two": "rhubarb, diced"
-					},
-					{
-						"One": "1 (3",
-						"Two": "ounce) package raspberry Jell-O gelatin"
-					},
-					{
-						"One": "1 cup",
-						"Two": "sugar"
-					},
-					{
-						"One": "3 cups",
-						"Two": "miniature marshmallows"
-					},
-					{
-						"One": "1 (18",
-						"Two": "1/4 ounce) package white cake mix (I use Pillsbury moist surpreme.)"
-					},
-					{
-						"One": "2 eggs",
-						"Two": ""
-					},
-					{
-						"One": "1 cup",
-						"Two": "water (or amount of water called for on the cake mix)"
-					},
-					{
-						"One": null,
-						"Two": null
-					}
-				]
-			}
-		]
-	},
-	{
-		"Url": "https://www.food.com/recipe/rhubarb-dump-cake-344047",
-		"Title": "Rhubarb Dump Cake Recipe  - Food.com",
-		"Images": [
-			"https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_744,ar_5:4/v1/gk-static/gk/img/recipe-default-images/image-03.svg",
-			"https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_860,ar_3:2/v1/gk-static/gk/img/recipe-default-images/image-03.svg",
-			"https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_328,ar_4:3/v1/img/recipes/60/50/1/zLXlRKywR86uMJQbCQb1_PEACH_COBBLER_DUMP_CAKE_024.jpg",
-			"https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_328,ar_4:3/v1/img/recipes/63/95/7/ys0zFF71R9GSAl81fCx3_DSC05563-2.jpg",
-			"https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_328,ar_4:3/v1/img/recipes/40/86/94/g3HQXLx8QJCbyhqeEa0h_strawberry-rhubarb-dump-cake-084.jpg",
-			"https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_328,ar_4:3/v1/gk-static/gk/img/recipe-default-images/image-03.svg"
-		],
-		"Items": [
-			{
-				"Instructions": [
-					"Dump 4 cups of chopped rhubarb into a buttered 13x9\" pan. Mix 1 cup sugar with small box of raspberry jello and sprinkle over rhubarb. Sprinkle entire box of dry cake mix over jello. Sprinkle 1 1/2 cups of water over cake mix covering completely. Mix together the brown sugar, flour, walnuts and cinnamon. Sprinkle on top of cake. Cut butter into small chunks and place all over cake. Bake at 350* for 1 hour or until done."
-				],
-				"Ingredients": [
-					{
-						"One": "4 cups",
-						"Two": "chopped rhubarb"
-					},
-					{
-						"One": "1 cup",
-						"Two": "sugar"
-					},
-					{
-						"One": "1 (3",
-						"Two": "ounce) box raspberry Jell-O gelatin"
-					},
-					{
-						"One": "1 (18",
-						"Two": "ounce) box white cake mix"
-					},
-					{
-						"One": "1 1⁄2 cups",
-						"Two": "water"
-					},
-					{
-						"One": "1⁄2 cup",
-						"Two": "brown sugar"
-					},
-					{
-						"One": "1⁄2 cup",
-						"Two": "flour"
-					},
-					{
-						"One": "1⁄4 cup",
-						"Two": "chopped walnuts"
-					},
-					{
-						"One": "1⁄2 teaspoon",
-						"Two": "cinnamon"
-					},
-					{
-						"One": "1⁄2 cup",
-						"Two": "butter"
-					},
-					{
-						"One": null,
-						"Two": null
-					}
-				]
-			}
-		]
-	},
-	{
-		"Url": "https://www.food.com/recipe/black-bean-chocolate-cake-516662",
-		"Title": "Black Bean Chocolate Cake Recipe  - Food.com",
-		"Images": [
-			"https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_744,ar_5:4/v1/img/recipes/51/66/62/1r0IgHaPQfaOBOsi9MAH_0226201156.jpg",
-			"https://graph.facebook.com/v2.12/10216497143008129/picture?type=square",
-			"https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_20,ar_5:4/v1/img/recipes/51/66/62/0Ubuvt3URhOVEQEb6mZe_2285.jpeg",
-			"https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_200,ar_3:2/v1/img/recipes/51/66/62/0Ubuvt3URhOVEQEb6mZe_2285.jpeg",
-			"https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_20,ar_5:4/v1/img/recipes/51/66/62/1r0IgHaPQfaOBOsi9MAH_0226201156.jpg",
-			"https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_20,ar_5:4/v1/img/recipes/51/66/62/0asLK18RCiE7DLHMFYil_20180224_152511.jpg",
-			"https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_200,ar_3:2/v1/img/recipes/51/66/62/0asLK18RCiE7DLHMFYil_20180224_152511.jpg",
-			"https://lh6.googleusercontent.com/-J-fPnZmLrsw/AAAAAAAAAAI/AAAAAAAABj4/1OaZa8Ldtzk/photo.jpg?sz=50",
-			"https://graph.facebook.com/v2.5/10212751014922507/picture?type=square",
-			"https://lh3.googleusercontent.com/a-/AAuE7mAQDsb_KBtMuWFOz0-UKoh8acJnuFw0JILcdvuzoI0?sz=50",
-			"https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_328,ar_4:3/v1/img/recipes/15/29/37/pic1b02fy.jpg",
-			"https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_328,ar_4:3/v1/img/recipes/38/99/46/picbZkDS0.jpg",
-			"https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_328,ar_4:3/v1/img/recipes/37/43/21/J359RVbVTUSgN3uRnS9X_bean%20patties%20with%20avocado%20crema.JPG",
-			"https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_328,ar_4:3/v1/img/recipes/50/25/37/piceKIJu1.jpg"
-		],
-		"Items": [
-			{
-				"Instructions": [
-					"Preheat oven to 325 degrees Fahrenheit.",
-					"Grease 9\" cake pan and dust with cocoa powder, tapping to evenly distribute.",
-					"Drain and rinse beans. Shake off excess water.",
-					"I use handheld mixer to pulverize beans smooth.",
-					"Add in 3 of the eggs, vanilla, salt and continue mixing. When smooth, add in coconut oil and honey. Add in last 2 eggs.",
-					"In separate bowl, sift in cocoa powder, baking soda and baking powder and then add to the wet ingredients",
-					"Beat on high until you achieve a nice smooth consistency. Approx 1 minute.",
-					"Scrape batter into pan and rap on counter a few times to free any bubbles.",
-					"Bake for 40-45 minutes. Cake is done when top is rounded, firm to touch and toothpick comes out clean.",
-					"LET CAKE SIT OVERNIGHT IF POSSIBLE or at least 8 hours. It's not a ready-eat-right-away type of cake.",
-					"Frost with favorite frosting and enjoy."
-				],
-				"Ingredients": [
-					{
-						"One": "15 ounces",
-						"Two": "of unseasoned black beans"
-					},
-					{
-						"One": "5 large",
-						"Two": "eggs"
-					},
-					{
-						"One": "1 tablespoon",
-						"Two": "pure vanilla extract"
-					},
-					{
-						"One": "1⁄2 teaspoon",
-						"Two": "sea salt"
-					},
-					{
-						"One": "6 tablespoons",
-						"Two": "coconut oil"
-					},
-					{
-						"One": "1⁄2 cup",
-						"Two": "honey"
-					},
-					{
-						"One": "6 tablespoons",
-						"Two": "dark Dutch-processed cocoa powder"
-					},
-					{
-						"One": "1 teaspoon",
-						"Two": "aluminum-free baking powder"
-					},
-					{
-						"One": "1⁄2 teaspoon",
-						"Two": "baking soda"
-					},
-					{
-						"One": null,
-						"Two": null
-					}
-				]
-			}
-		]
-	},
-	{
-		"Url": "https://www.food.com/recipe/banana-bread-138434",
-		"Title": "Banana Bread Recipe  - Food.com",
-		"Images": [
-			"https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_744,ar_5:4/v1/img/recipes/13/84/34/pic3aZVnX.jpg",
-			"https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_20,ar_5:4/v1/img/recipes/13/84/34/picXYQaPC.jpg",
-			"https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_200,ar_3:2/v1/img/recipes/13/84/34/picXYQaPC.jpg",
-			"https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_328,ar_4:3/v1/img/recipes/53/72/20/42f1bqmmSg2YbAKKTMVp_Banana%20Recipes63.jpg",
-			"https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_328,ar_4:3/v1/img/recipes/28/86/wBZxNua1T8yfDwbfo9Fz_0S9A9315.jpg",
-			"https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_328,ar_4:3/v1/img/recipes/25/88/5/CRAukFk1Tf2xpDPtcOUB_0S9A1642.jpg"
-		],
-		"Items": [
-			{
-				"Instructions": [
-					"Preheat oven to 350°. Spray bottom of 9 x 5 loaf pan with cooking spray.",
-					"Beat butter in large bowl with electric mixer at medium speed until light and fluffy. Add sugars. Add eggs, and vanilla. Add mashed banana and beat at high speed for 30 seconds.",
-					"Combine flour, soda, salt and baking powder. Add flour mixture to butter mixture, along with the cream. Add walnuts; mix well.",
-					"Pour batter evenly into loaf pan. Bake until browned and toothpick inserted near center comes out clean, about 1 hour 15 minutes.",
-					"Cool on wire rack 10 minutes. remove from pan and cut it to eat it. YUM!"
-				],
-				"Ingredients": [
-					{
-						"One": "5 tablespoons",
-						"Two": "butter"
-					},
-					{
-						"One": "1⁄2 cup",
-						"Two": "sugar"
-					},
-					{
-						"One": "1⁄2 cup",
-						"Two": "packed brown sugar"
-					},
-					{
-						"One": "1 large",
-						"Two": "egg"
-					},
-					{
-						"One": "2 large",
-						"Two": "egg whites"
-					},
-					{
-						"One": "1 teaspoon",
-						"Two": "vanilla extract"
-					},
-					{
-						"One": "1 1⁄2 cups",
-						"Two": "mashed ripe bananas"
-					},
-					{
-						"One": "1 3⁄4 cups",
-						"Two": "flour"
-					},
-					{
-						"One": "1 teaspoon",
-						"Two": "baking soda"
-					},
-					{
-						"One": "1⁄2 teaspoon",
-						"Two": "salt"
-					},
-					{
-						"One": "1⁄4 teaspoon",
-						"Two": "baking powder"
-					},
-					{
-						"One": "1⁄2 cup",
-						"Two": "heavy cream"
-					},
-					{
-						"One": "1⁄3 cup",
-						"Two": "chopped walnuts"
-					},
-					{
-						"One": null,
-						"Two": null
-					}
-				]
-			}
-		]
-	},
-	{
-		"Url": "https://www.food.com/recipe/blondies-414229",
-		"Title": "Blondies Recipe  - Food.com",
-		"Images": [
-			"https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_744,ar_5:4/v1/img/recipes/41/42/29/pic3WRn9V.jpg",
-			"https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_328,ar_4:3/v1/img/recipes/38/48/00/picWdg4wD.jpg",
-			"https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_328,ar_4:3/v1/img/recipes/42/25/6/jVTdXeLRi2N4NjRyXG1w-Blondies-3.jpg",
-			"https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_328,ar_4:3/v1/img/recipes/57/25/0/sEH9DvdRJuhOYHdqWyIw_CB%25205%2520-%2520final_3.png",
-			"https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_328,ar_4:3/v1/img/recipes/19/22/7/picS0owfH.jpg"
-		],
-		"Items": [
-			{
-				"Instructions": [
-					"Melt butter and add brown sugar. Let cool.\r",
-					"Add all remaining ingredients and mix well.\r",
-					"Put into greased 9\"x9\" pan. Bake for 20-25 minutes in 350 degree oven. Do not overcook. \r",
-					"Cool slightly and cut into 1\"x3\" bars. Cookies should be moist and chewy, so keep them in an airtight container."
-				],
-				"Ingredients": [
-					{
-						"One": "1⁄4 cup",
-						"Two": "butter"
-					},
-					{
-						"One": "1 cup",
-						"Two": "brown sugar"
-					},
-					{
-						"One": "1 egg,",
-						"Two": "beaten"
-					},
-					{
-						"One": "3⁄4 cup",
-						"Two": "flour"
-					},
-					{
-						"One": "1 teaspoon",
-						"Two": "baking powder"
-					},
-					{
-						"One": "1⁄2 teaspoon",
-						"Two": "salt"
-					},
-					{
-						"One": "1⁄2 teaspoon",
-						"Two": "vanilla"
-					},
-					{
-						"One": "1⁄2 cup",
-						"Two": "chopped nuts"
-					},
-					{
-						"One": null,
-						"Two": null
-					}
-				]
-			}
-		]
-	},
-	{
-		"Url": "https://www.food.com/recipe/kansas-city-cornbread-405534",
-		"Title": "Kansas City Cornbread Recipe  - Food.com",
-		"Images": [
-			"https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_744,ar_5:4/v1/img/recipes/40/55/34/piczsd4bu.jpg",
-			"https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_20,ar_5:4/v1/img/recipes/40/55/34/picUdXjpN.jpg",
-			"https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_200,ar_3:2/v1/img/recipes/40/55/34/picUdXjpN.jpg",
-			"https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_328,ar_4:3/v1/img/recipes/73/20/1/picWPpeD5.jpg",
-			"https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_328,ar_4:3/v1/img/recipes/19/44/00/54Jim9iVTQkU7tkVebbK_chicken%20tenders%20SITE-2.jpg",
-			"https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_328,ar_4:3/v1/img/recipes/13/73/55/jBkDWsARRlK8ukbHlAgw_0S9A8687.jpg",
-			"https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_328,ar_4:3/v1/img/recipes/28/75/39/pic0iLJDD.jpg"
-		],
-		"Items": [
-			{
-				"Instructions": [
-					"Sift dry ingredients and add the milk. Beat the fat with eggs until light. Add to batter and mix well. Pour into a very hot, well-buttered pan.",
-					"Bake 40 to 50 minutes at 350 degrees."
-				],
-				"Ingredients": [
-					{
-						"One": "2 1⁄2 cups",
-						"Two": "cornmeal"
-					},
-					{
-						"One": "3 teaspoons",
-						"Two": "baking powder"
-					},
-					{
-						"One": "2 eggs",
-						"Two": ""
-					},
-					{
-						"One": "1 1⁄2 teaspoons",
-						"Two": "salt"
-					},
-					{
-						"One": "2 cups",
-						"Two": "milk"
-					},
-					{
-						"One": "2 tablespoons",
-						"Two": "melted fat"
-					},
-					{
-						"One": null,
-						"Two": null
-					}
-				]
-			}
-		]
-	},
-	{
-		"Url": "https://www.food.com/recipe/moms-potato-soup-405871",
-		"Title": "Mom's Potato Soup Recipe  - Food.com",
-		"Images": [
-			"https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_744,ar_5:4/v1/img/recipes/40/58/71/picMFX5BN.jpg",
-			"https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_328,ar_4:3/v1/img/recipes/86/63/picq6kgsb.jpg",
-			"https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_328,ar_4:3/v1/gk-static/gk/img/recipe-default-images/image-02.svg",
-			"https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_328,ar_4:3/v1/gk-static/gk/img/recipe-default-images/image-00.svg",
-			"https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_328,ar_4:3/v1/gk-static/gk/img/recipe-default-images/image-03.svg"
-		],
-		"Items": [
-			{
-				"Instructions": [
-					"Cover potatoes with water; add salt and cook until they can be pierced with a fork. Don't overcook. Pour off about half the water. Break up potatoes slightly. Add margarine and Half & Half. Season to taste with salt and pepper.",
-					"VARIATION: Add one package of imitation crab meat (cut into small chunks) and a can of drained whole kernal corn to make a delicious chowder. Give it some Cajun flavor with 1/2 teaspoon of Louisiana Spice."
-				],
-				"Ingredients": [
-					{
-						"One": "9 medium",
-						"Two": "potatoes, peeled and sliced about 1/4-inch thick"
-					},
-					{
-						"One": "3⁄4 teaspoon",
-						"Two": "salt"
-					},
-					{
-						"One": "1⁄2 cup",
-						"Two": "margarine"
-					},
-					{
-						"One": "1 cup",
-						"Two": "half-and-half cream"
-					},
-					{
-						"One": null,
-						"Two": null
-					}
-				]
-			}
-		]
-	},
-	{
-		"Url": "https://www.food.com/recipe/kidney-bean-salad-406471",
-		"Title": "Kidney Bean Salad Recipe  - Food.com",
-		"Images": [
-			"https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_744,ar_5:4/v1/gk-static/gk/img/recipe-default-images/image-03.svg",
-			"https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_860,ar_3:2/v1/gk-static/gk/img/recipe-default-images/image-03.svg",
-			"https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_328,ar_4:3/v1/img/recipes/31/30/0/picSAmeHR.jpg",
-			"https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_328,ar_4:3/v1/img/recipes/13/00/17/picUM610p.jpg",
-			"https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_328,ar_4:3/v1/img/recipes/13/37/61/uVTxkVoTRK692t2BIlDQ_SANY003%2520%2520%2520%2520%2520%2520picture%2520chosen.JPG",
-			"https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_328,ar_4:3/v1/img/recipes/50/45/85/picgzehfc.jpg"
-		],
-		"Items": [
-			{
-				"Instructions": [
-					"Mix all ingredients together.",
-					"Salt to taste.",
-					"Add more sandwich spread if needed.",
-					"Refrigerate at least 2 hours before serving."
-				],
-				"Ingredients": [
-					{
-						"One": "1 (15",
-						"Two": "ounce) can red kidney beans, rinsed and drained"
-					},
-					{
-						"One": "2 hard-boiled",
-						"Two": "eggs, diced"
-					},
-					{
-						"One": "4 whole",
-						"Two": "sweet pickles, diced"
-					},
-					{
-						"One": "3⁄4 cup",
-						"Two": "colby cheese, diced"
-					},
-					{
-						"One": "1⁄4 cup",
-						"Two": "sweet onion, chopped (optional)"
-					},
-					{
-						"One": "1⁄4 cup",
-						"Two": "celery, chopped (optional)"
-					},
-					{
-						"One": "1⁄3 cup",
-						"Two": "relish sandwich spread (Kraft Original Sandwich Spread)"
-					},
-					{
-						"One": "salt and pepper",
-						"Two": null
-					}
-				]
-			}
-		]
-	},
-	{
-		"Url": "https://www.food.com/recipe/beet-jelly-408696",
-		"Title": "Beet Jelly Recipe  - Food.com",
-		"Images": [
-			"https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_744,ar_5:4/v1/gk-static/gk/img/recipe-default-images/image-00.svg",
-			"https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_860,ar_3:2/v1/gk-static/gk/img/recipe-default-images/image-00.svg",
-			"https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_328,ar_4:3/v1/img/recipes/10/72/3/tPk6AEG6SAKyw2iIYccz_20181216_214859.jpg",
-			"https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_328,ar_4:3/v1/gk-static/gk/img/recipe-default-images/image-00.svg",
-			"https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_328,ar_4:3/v1/gk-static/gk/img/recipe-default-images/image-03.svg",
-			"https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_328,ar_4:3/v1/gk-static/gk/img/recipe-default-images/image-03.svg"
-		],
-		"Items": [
-			{
-				"Instructions": [
-					"Wash 6-8 medium beets. Leave at least a 2\" stem on top and leave the bottom root. Boil until tender in enough water to cover beets. Remove beets and leave 3 cups of beet water in the pan.\r",
-					"Bring beet water to a boil.\r",
-					"Add Sure Jell and bring to a boil.\r",
-					"Add raspberry Jell-O and bring to a boil.\r",
-					"Add sugar and bring to a boil; boil for 5 minutes.\r",
-					"Put into sterile jars. Use paraffin to seal."
-				],
-				"Ingredients": [
-					{
-						"One": "3 cups",
-						"Two": "beet water"
-					},
-					{
-						"One": "1 (3",
-						"Two": "ounce) package Sure-Jell"
-					},
-					{
-						"One": "1 (3",
-						"Two": "ounce) package raspberry Jell-O gelatin"
-					},
-					{
-						"One": "4 cups",
-						"Two": "granulated sugar"
-					},
-					{
-						"One": null,
-						"Two": null
-					}
-				]
-			}
-		]
-	}
+  {
+    "Url": "https://www.food.com/recipe/strawberry-rhubarb-dump-cake-408694",
+    "Title": "Strawberry Rhubarb Dump Cake Recipe",
+    "Images": [
+      "https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_744,ar_5:4/v1/img/recipes/40/86/94/g3HQXLx8QJCbyhqeEa0h_strawberry-rhubarb-dump-cake-084.jpg",
+      "https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_20,ar_5:4/v1/img/recipes/40/86/94/2wwMxM4mRHmFqNLtxl7g_strawberry-rhubarb-dump-cake-057.jpg",
+      "https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_200,ar_3:2/v1/img/recipes/40/86/94/2wwMxM4mRHmFqNLtxl7g_strawberry-rhubarb-dump-cake-057.jpg",
+      "https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_20,ar_5:4/v1/img/recipes/40/86/94/kPYQgpyQ6yTb6L99SKKg_strawberry-rhubarb-dump-cake-107.jpg",
+      "https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_200,ar_3:2/v1/img/recipes/40/86/94/kPYQgpyQ6yTb6L99SKKg_strawberry-rhubarb-dump-cake-107.jpg",
+      "https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_20,ar_5:4/v1/img/recipes/40/86/94/ugYN9mtRRtChrhF9VCSM_strawberry-rhubarb-dump-cake-012.jpg",
+      "https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_200,ar_3:2/v1/img/recipes/40/86/94/ugYN9mtRRtChrhF9VCSM_strawberry-rhubarb-dump-cake-012.jpg",
+      "https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_20,ar_5:4/v1/img/recipes/40/86/94/picNQPjbC.jpg",
+      "https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_200,ar_3:2/v1/img/recipes/40/86/94/picNQPjbC.jpg",
+      "https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_328,ar_4:3/v1/img/recipes/60/50/1/zLXlRKywR86uMJQbCQb1_PEACH_COBBLER_DUMP_CAKE_024.jpg",
+      "https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_328,ar_4:3/v1/img/recipes/63/95/7/ys0zFF71R9GSAl81fCx3_DSC05563-2.jpg",
+      "https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_328,ar_4:3/v1/gk-static/gk/img/recipe-default-images/image-03.svg",
+      "https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_328,ar_4:3/v1/gk-static/gk/img/recipe-default-images/image-03.svg"
+    ],
+    "Items": [
+      {
+        "Instructions": [
+          "Put ingredients in a buttered 9 x 12 x 2-inch pan in even layers in the order that they are given - DO NOT MIX.",
+          "Bake in a 350° oven for 1 hour."
+        ],
+        "Ingredients": [
+          {
+            "One": "6 -8 cups",
+            "Two": "fresh rhubarb, or"
+          },
+          {
+            "One": "6 -8 cups",
+            "Two": "frozen rhubarb, thawed"
+          },
+          {
+            "One": "1 1⁄2 cups",
+            "Two": "granulated sugar"
+          },
+          {
+            "One": "6 ounces",
+            "Two": "strawberry Jell-O gelatin dessert"
+          },
+          {
+            "One": "1 white",
+            "Two": "cake mix (2 layer size)"
+          },
+          {
+            "One": "1 1⁄2 cups",
+            "Two": "water"
+          },
+          {
+            "One": "1⁄2 cup",
+            "Two": "butter or 1/2 cup margarine, melted"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Url": "https://www.food.com/recipe/rhubarb-dump-cake-63957",
+    "Title": "Rhubarb Dump Cake Recipe",
+    "Images": [
+      "https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_744,ar_5:4/v1/img/recipes/63/95/7/ys0zFF71R9GSAl81fCx3_DSC05563-2.jpg",
+      "https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_20,ar_5:4/v1/img/recipes/63/95/7/whsAzKNTfKEAnmJ34mzG_DSC05561-2.jpg",
+      "https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_200,ar_3:2/v1/img/recipes/63/95/7/whsAzKNTfKEAnmJ34mzG_DSC05561-2.jpg",
+      "https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_20,ar_5:4/v1/img/recipes/63/95/7/RBV41LO8RdCSil7jF4lW_DSC05560-2.jpg",
+      "https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_200,ar_3:2/v1/img/recipes/63/95/7/RBV41LO8RdCSil7jF4lW_DSC05560-2.jpg",
+      "https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_20,ar_5:4/v1/img/recipes/63/95/7/picsMAhHx.jpg",
+      "https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_200,ar_3:2/v1/img/recipes/63/95/7/picsMAhHx.jpg",
+      "https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_328,ar_4:3/v1/img/recipes/26/37/0/bzwUWgTTGZ83fb1AbjMQ_CC%208%20-%20final_6.jpg",
+      "https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_328,ar_4:3/v1/img/recipes/60/50/1/zLXlRKywR86uMJQbCQb1_PEACH_COBBLER_DUMP_CAKE_024.jpg",
+      "https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_328,ar_4:3/v1/img/recipes/40/86/94/g3HQXLx8QJCbyhqeEa0h_strawberry-rhubarb-dump-cake-084.jpg",
+      "https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_328,ar_4:3/v1/gk-static/gk/img/recipe-default-images/image-03.svg"
+    ],
+    "Items": [
+      {
+        "Instructions": [
+          "Preheat oven to 350 degrees.",
+          "Line the bottom of an ungreased 13x9x2-inch baking pan with the rhubarb.",
+          "Sprinkle sugar over the rhubarb.",
+          "Sprinkle dry raspberry gelatin, ( or strawberry gelatin ) which ever you prefer; over the sugar.",
+          "Next, sprinkle the cake mix over the gelatin.",
+          "Melt butter; pour over the cake mix.",
+          "Pour the 1 cup of water over cake mix.",
+          "Bake for 45 minutes.",
+          "Cool completely; then chill in refrigerator.",
+          "When ready to serve, invert onto plate.",
+          "Top with either vanilla ice cream or Cool Whip.",
+          "Serves 12 to 16.",
+          "Note: If using frozen rhubarb, reduce the amount of water to 1/2 cup.",
+          "This cake was baked in a gas oven.",
+          "If baking in an electric oven, you may need to increase baking time; depending upon oven and altitude.",
+          "Chef sheerkerry baked hers in an electric oven for 1 hour and 10 minutes."
+        ],
+        "Ingredients": [
+          {
+            "One": "4 -5 cups",
+            "Two": "diced rhubarb"
+          },
+          {
+            "One": "3⁄4 cup",
+            "Two": "sugar"
+          },
+          {
+            "One": "1 (3",
+            "Two": "ounce) package raspberry gelatin powder or (3 ounce) package strawberry gelatin"
+          },
+          {
+            "One": "1 (18",
+            "Two": "1/2 ounce) box yellow cake mix (with pudding in the mix)"
+          },
+          {
+            "One": "1⁄2 cup",
+            "Two": "butter"
+          },
+          {
+            "One": "1 cup",
+            "Two": "water"
+          },
+          {
+            "One": null,
+            "Two": "vanilla ice cream or cool whip dessert topping"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Url": "https://www.food.com/recipe/rhubarb-dump-cake-91835",
+    "Title": "Box-Mix Rhubarb Dump Cake Recipe",
+    "Images": [
+      "https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_744,ar_5:4/v1/gk-static/gk/img/recipe-default-images/image-03.svg",
+      "https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_860,ar_3:2/v1/gk-static/gk/img/recipe-default-images/image-03.svg",
+      "https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_70,ar_1:1/v1/pickle_media1/media/rz_migration/29/Photo_Video_29063_medthumb_hor.jpg",
+      "https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_328,ar_4:3/v1/img/recipes/19/44/00/54Jim9iVTQkU7tkVebbK_chicken%20tenders%20SITE-2.jpg",
+      "https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_328,ar_4:3/v1/img/recipes/13/73/55/jBkDWsARRlK8ukbHlAgw_0S9A8687.jpg",
+      "https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_328,ar_4:3/v1/img/recipes/28/75/39/pic0iLJDD.jpg",
+      "https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_328,ar_4:3/v1/img/recipes/91/26/6/EEIklV6WRqiXKYfRVmzK_balsamic%2520chicken%2520pepper%2520onions%2520SITE-1.jpg"
+    ],
+    "Items": [
+      {
+        "Instructions": [
+          "Arrange rhubarb in the bottom of a 9X13 inch pan.",
+          "Sprinkle Jello over rhubarb.",
+          "Sprinkle sugar over Jello.",
+          "Cover with Marshmallows.",
+          "Prepare cake mix using 2 eggs and the required amount of water called for on the cake mix.",
+          "DO NOT add the oil.",
+          "Spread cake batter over the marshmallows.",
+          "Bake at 350 degrees for 50-55 mins.",
+          "Serve warm with cool whip or ice-cream."
+        ],
+        "Ingredients": [
+          {
+            "One": "5 cups",
+            "Two": "rhubarb, diced"
+          },
+          {
+            "One": "1 (3",
+            "Two": "ounce) package raspberry Jell-O gelatin"
+          },
+          {
+            "One": "1 cup",
+            "Two": "sugar"
+          },
+          {
+            "One": "3 cups",
+            "Two": "miniature marshmallows"
+          },
+          {
+            "One": "1 (18",
+            "Two": "1/4 ounce) package white cake mix (I use Pillsbury moist surpreme.)"
+          },
+          {
+            "One": "2",
+            "Two": "eggs"
+          },
+          {
+            "One": "1 cup",
+            "Two": "water (or amount of water called for on the cake mix)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Url": "https://www.food.com/recipe/rhubarb-dump-cake-344047",
+    "Title": "Rhubarb Dump Cake Recipe",
+    "Images": [
+      "https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_744,ar_5:4/v1/gk-static/gk/img/recipe-default-images/image-03.svg",
+      "https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_860,ar_3:2/v1/gk-static/gk/img/recipe-default-images/image-03.svg",
+      "https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_328,ar_4:3/v1/img/recipes/60/50/1/zLXlRKywR86uMJQbCQb1_PEACH_COBBLER_DUMP_CAKE_024.jpg",
+      "https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_328,ar_4:3/v1/img/recipes/63/95/7/ys0zFF71R9GSAl81fCx3_DSC05563-2.jpg",
+      "https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_328,ar_4:3/v1/img/recipes/40/86/94/g3HQXLx8QJCbyhqeEa0h_strawberry-rhubarb-dump-cake-084.jpg",
+      "https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_328,ar_4:3/v1/gk-static/gk/img/recipe-default-images/image-03.svg"
+    ],
+    "Items": [
+      {
+        "Instructions": [
+          "Dump 4 cups of chopped rhubarb into a buttered 13x9\" pan. Mix 1 cup sugar with small box of raspberry jello and sprinkle over rhubarb. Sprinkle entire box of dry cake mix over jello. Sprinkle 1 1/2 cups of water over cake mix covering completely. Mix together the brown sugar, flour, walnuts and cinnamon. Sprinkle on top of cake. Cut butter into small chunks and place all over cake. Bake at 350* for 1 hour or until done."
+        ],
+        "Ingredients": [
+          {
+            "One": "4 cups",
+            "Two": "chopped rhubarb"
+          },
+          {
+            "One": "1 cup",
+            "Two": "sugar"
+          },
+          {
+            "One": "1 (3",
+            "Two": "ounce) box raspberry Jell-O gelatin"
+          },
+          {
+            "One": "1 (18",
+            "Two": "ounce) box white cake mix"
+          },
+          {
+            "One": "1 1⁄2 cups",
+            "Two": "water"
+          },
+          {
+            "One": "1⁄2 cup",
+            "Two": "brown sugar"
+          },
+          {
+            "One": "1⁄2 cup",
+            "Two": "flour"
+          },
+          {
+            "One": "1⁄4 cup",
+            "Two": "chopped walnuts"
+          },
+          {
+            "One": "1⁄2 teaspoon",
+            "Two": "cinnamon"
+          },
+          {
+            "One": "1⁄2 cup",
+            "Two": "butter"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Url": "https://www.food.com/recipe/black-bean-chocolate-cake-516662",
+    "Title": "Black Bean Chocolate Cake Recipe",
+    "Images": [
+      "https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_744,ar_5:4/v1/img/recipes/51/66/62/1r0IgHaPQfaOBOsi9MAH_0226201156.jpg",
+      "https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_20,ar_5:4/v1/img/recipes/51/66/62/0Ubuvt3URhOVEQEb6mZe_2285.jpeg",
+      "https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_200,ar_3:2/v1/img/recipes/51/66/62/0Ubuvt3URhOVEQEb6mZe_2285.jpeg",
+      "https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_20,ar_5:4/v1/img/recipes/51/66/62/1r0IgHaPQfaOBOsi9MAH_0226201156.jpg",
+      "https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_20,ar_5:4/v1/img/recipes/51/66/62/0asLK18RCiE7DLHMFYil_20180224_152511.jpg",
+      "https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_200,ar_3:2/v1/img/recipes/51/66/62/0asLK18RCiE7DLHMFYil_20180224_152511.jpg",
+      "https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_328,ar_4:3/v1/img/recipes/15/29/37/pic1b02fy.jpg",
+      "https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_328,ar_4:3/v1/img/recipes/38/99/46/picbZkDS0.jpg",
+      "https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_328,ar_4:3/v1/img/recipes/37/43/21/J359RVbVTUSgN3uRnS9X_bean%20patties%20with%20avocado%20crema.JPG",
+      "https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_328,ar_4:3/v1/img/recipes/50/25/37/piceKIJu1.jpg"
+    ],
+    "Items": [
+      {
+        "Instructions": [
+          "Preheat oven to 325 degrees Fahrenheit.",
+          "Grease 9\" cake pan and dust with cocoa powder, tapping to evenly distribute.",
+          "Drain and rinse beans. Shake off excess water.",
+          "I use handheld mixer to pulverize beans smooth.",
+          "Add in 3 of the eggs, vanilla, salt and continue mixing. When smooth, add in coconut oil and honey. Add in last 2 eggs.",
+          "In separate bowl, sift in cocoa powder, baking soda and baking powder and then add to the wet ingredients",
+          "Beat on high until you achieve a nice smooth consistency. Approx 1 minute.",
+          "Scrape batter into pan and rap on counter a few times to free any bubbles.",
+          "Bake for 40-45 minutes. Cake is done when top is rounded, firm to touch and toothpick comes out clean.",
+          "LET CAKE SIT OVERNIGHT IF POSSIBLE or at least 8 hours. It's not a ready-eat-right-away type of cake.",
+          "Frost with favorite frosting and enjoy."
+        ],
+        "Ingredients": [
+          {
+            "One": "15 ounces",
+            "Two": "of unseasoned black beans"
+          },
+          {
+            "One": "5 large",
+            "Two": "eggs"
+          },
+          {
+            "One": "1 tablespoon",
+            "Two": "pure vanilla extract"
+          },
+          {
+            "One": "1⁄2 teaspoon",
+            "Two": "sea salt"
+          },
+          {
+            "One": "6 tablespoons",
+            "Two": "coconut oil"
+          },
+          {
+            "One": "1⁄2 cup",
+            "Two": "honey"
+          },
+          {
+            "One": "6 tablespoons",
+            "Two": "dark Dutch-processed cocoa powder"
+          },
+          {
+            "One": "1 teaspoon",
+            "Two": "aluminum-free baking powder"
+          },
+          {
+            "One": "1⁄2 teaspoon",
+            "Two": "baking soda"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Url": "https://www.food.com/recipe/banana-bread-138434",
+    "Title": "Banana Bread Recipe",
+    "Images": [
+      "https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_744,ar_5:4/v1/img/recipes/13/84/34/pic3aZVnX.jpg",
+      "https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_20,ar_5:4/v1/img/recipes/13/84/34/picXYQaPC.jpg",
+      "https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_200,ar_3:2/v1/img/recipes/13/84/34/picXYQaPC.jpg",
+      "https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_328,ar_4:3/v1/img/recipes/53/72/20/42f1bqmmSg2YbAKKTMVp_Banana%20Recipes63.jpg",
+      "https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_328,ar_4:3/v1/img/recipes/28/86/wBZxNua1T8yfDwbfo9Fz_0S9A9315.jpg",
+      "https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_328,ar_4:3/v1/img/recipes/25/88/5/CRAukFk1Tf2xpDPtcOUB_0S9A1642.jpg"
+    ],
+    "Items": [
+      {
+        "Instructions": [
+          "Preheat oven to 350°. Spray bottom of 9 x 5 loaf pan with cooking spray.",
+          "Beat butter in large bowl with electric mixer at medium speed until light and fluffy. Add sugars. Add eggs, and vanilla. Add mashed banana and beat at high speed for 30 seconds.",
+          "Combine flour, soda, salt and baking powder. Add flour mixture to butter mixture, along with the cream. Add walnuts; mix well.",
+          "Pour batter evenly into loaf pan. Bake until browned and toothpick inserted near center comes out clean, about 1 hour 15 minutes.",
+          "Cool on wire rack 10 minutes. remove from pan and cut it to eat it. YUM!"
+        ],
+        "Ingredients": [
+          {
+            "One": "5 tablespoons",
+            "Two": "butter"
+          },
+          {
+            "One": "1⁄2 cup",
+            "Two": "sugar"
+          },
+          {
+            "One": "1⁄2 cup",
+            "Two": "packed brown sugar"
+          },
+          {
+            "One": "1 large",
+            "Two": "egg"
+          },
+          {
+            "One": "2 large",
+            "Two": "egg whites"
+          },
+          {
+            "One": "1 teaspoon",
+            "Two": "vanilla extract"
+          },
+          {
+            "One": "1 1⁄2 cups",
+            "Two": "mashed ripe bananas"
+          },
+          {
+            "One": "1 3⁄4 cups",
+            "Two": "flour"
+          },
+          {
+            "One": "1 teaspoon",
+            "Two": "baking soda"
+          },
+          {
+            "One": "1⁄2 teaspoon",
+            "Two": "salt"
+          },
+          {
+            "One": "1⁄4 teaspoon",
+            "Two": "baking powder"
+          },
+          {
+            "One": "1⁄2 cup",
+            "Two": "heavy cream"
+          },
+          {
+            "One": "1⁄3 cup",
+            "Two": "chopped walnuts"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Url": "https://www.food.com/recipe/blondies-414229",
+    "Title": "Blondies Recipe",
+    "Images": [
+      "https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_744,ar_5:4/v1/img/recipes/41/42/29/pic3WRn9V.jpg",
+      "https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_328,ar_4:3/v1/img/recipes/38/48/00/picWdg4wD.jpg",
+      "https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_328,ar_4:3/v1/img/recipes/42/25/6/jVTdXeLRi2N4NjRyXG1w-Blondies-3.jpg",
+      "https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_328,ar_4:3/v1/img/recipes/57/25/0/sEH9DvdRJuhOYHdqWyIw_CB%25205%2520-%2520final_3.png",
+      "https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_328,ar_4:3/v1/img/recipes/19/22/7/picS0owfH.jpg"
+    ],
+    "Items": [
+      {
+        "Instructions": [
+          "Melt butter and add brown sugar. Let cool.",
+          "Add all remaining ingredients and mix well.",
+          "Put into greased 9\"x9\" pan. Bake for 20-25 minutes in 350 degree oven. Do not overcook. ",
+          "Cool slightly and cut into 1\"x3\" bars. Cookies should be moist and chewy, so keep them in an airtight container."
+        ],
+        "Ingredients": [
+          {
+            "One": "1⁄4 cup",
+            "Two": "butter"
+          },
+          {
+            "One": "1 cup",
+            "Two": "brown sugar"
+          },
+          {
+            "One": "1 egg,",
+            "Two": "beaten"
+          },
+          {
+            "One": "3⁄4 cup",
+            "Two": "flour"
+          },
+          {
+            "One": "1 teaspoon",
+            "Two": "baking powder"
+          },
+          {
+            "One": "1⁄2 teaspoon",
+            "Two": "salt"
+          },
+          {
+            "One": "1⁄2 teaspoon",
+            "Two": "vanilla"
+          },
+          {
+            "One": "1⁄2 cup",
+            "Two": "chopped nuts"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Url": "https://www.food.com/recipe/kansas-city-cornbread-405534",
+    "Title": "Kansas City Cornbread Recipe",
+    "Images": [
+      "https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_744,ar_5:4/v1/img/recipes/40/55/34/piczsd4bu.jpg",
+      "https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_20,ar_5:4/v1/img/recipes/40/55/34/picUdXjpN.jpg",
+      "https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_200,ar_3:2/v1/img/recipes/40/55/34/picUdXjpN.jpg",
+      "https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_328,ar_4:3/v1/img/recipes/73/20/1/picWPpeD5.jpg",
+      "https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_328,ar_4:3/v1/img/recipes/19/44/00/54Jim9iVTQkU7tkVebbK_chicken%20tenders%20SITE-2.jpg",
+      "https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_328,ar_4:3/v1/img/recipes/13/73/55/jBkDWsARRlK8ukbHlAgw_0S9A8687.jpg",
+      "https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_328,ar_4:3/v1/img/recipes/28/75/39/pic0iLJDD.jpg"
+    ],
+    "Items": [
+      {
+        "Instructions": [
+          "Sift dry ingredients and add the milk. Beat the fat with eggs until light. Add to batter and mix well. Pour into a very hot, well-buttered pan.",
+          "Bake 40 to 50 minutes at 350 degrees."
+        ],
+        "Ingredients": [
+          {
+            "One": "2 1⁄2 cups",
+            "Two": "cornmeal"
+          },
+          {
+            "One": "3 teaspoons",
+            "Two": "baking powder"
+          },
+          {
+            "One": "2",
+            "Two": "eggs"
+          },
+          {
+            "One": "1 1⁄2 teaspoons",
+            "Two": "salt"
+          },
+          {
+            "One": "2 cups",
+            "Two": "milk"
+          },
+          {
+            "One": "2 tablespoons",
+            "Two": "melted fat"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Url": "https://www.food.com/recipe/moms-potato-soup-405871",
+    "Title": "Mom's Potato Soup Recipe",
+    "Images": [
+      "https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_744,ar_5:4/v1/img/recipes/40/58/71/picMFX5BN.jpg",
+      "https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_328,ar_4:3/v1/img/recipes/86/63/picq6kgsb.jpg",
+      "https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_328,ar_4:3/v1/gk-static/gk/img/recipe-default-images/image-02.svg",
+      "https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_328,ar_4:3/v1/gk-static/gk/img/recipe-default-images/image-00.svg",
+      "https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_328,ar_4:3/v1/gk-static/gk/img/recipe-default-images/image-03.svg"
+    ],
+    "Items": [
+      {
+        "Instructions": [
+          "Cover potatoes with water; add salt and cook until they can be pierced with a fork. Don't overcook. Pour off about half the water. Break up potatoes slightly. Add margarine and Half & Half. Season to taste with salt and pepper.",
+          "VARIATION: Add one package of imitation crab meat (cut into small chunks) and a can of drained whole kernal corn to make a delicious chowder. Give it some Cajun flavor with 1/2 teaspoon of Louisiana Spice."
+        ],
+        "Ingredients": [
+          {
+            "One": "9 medium",
+            "Two": "potatoes, peeled and sliced about 1/4-inch thick"
+          },
+          {
+            "One": "3⁄4 teaspoon",
+            "Two": "salt"
+          },
+          {
+            "One": "1⁄2 cup",
+            "Two": "margarine"
+          },
+          {
+            "One": "1 cup",
+            "Two": "half-and-half cream"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Url": "https://www.food.com/recipe/kidney-bean-salad-406471",
+    "Title": "Kidney Bean Salad Recipe",
+    "Images": [
+      "https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_744,ar_5:4/v1/gk-static/gk/img/recipe-default-images/image-03.svg",
+      "https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_860,ar_3:2/v1/gk-static/gk/img/recipe-default-images/image-03.svg",
+      "https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_328,ar_4:3/v1/img/recipes/31/30/0/picSAmeHR.jpg",
+      "https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_328,ar_4:3/v1/img/recipes/13/00/17/picUM610p.jpg",
+      "https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_328,ar_4:3/v1/img/recipes/13/37/61/uVTxkVoTRK692t2BIlDQ_SANY003%2520%2520%2520%2520%2520%2520picture%2520chosen.JPG",
+      "https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_328,ar_4:3/v1/img/recipes/50/45/85/picgzehfc.jpg"
+    ],
+    "Items": [
+      {
+        "Instructions": [
+          "Mix all ingredients together.",
+          "Salt to taste.",
+          "Add more sandwich spread if needed.",
+          "Refrigerate at least 2 hours before serving."
+        ],
+        "Ingredients": [
+          {
+            "One": "1 (15",
+            "Two": "ounce) can red kidney beans, rinsed and drained"
+          },
+          {
+            "One": "2 hard-boiled",
+            "Two": "eggs, diced"
+          },
+          {
+            "One": "4 whole",
+            "Two": "sweet pickles, diced"
+          },
+          {
+            "One": "3⁄4 cup",
+            "Two": "colby cheese, diced"
+          },
+          {
+            "One": "1⁄4 cup",
+            "Two": "sweet onion, chopped (optional)"
+          },
+          {
+            "One": "1⁄4 cup",
+            "Two": "celery, chopped (optional)"
+          },
+          {
+            "One": "1⁄3 cup",
+            "Two": "relish sandwich spread (Kraft Original Sandwich Spread)"
+          },
+          {
+            "One": null,
+            "Two": "salt and pepper"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Url": "https://www.food.com/recipe/beet-jelly-408696",
+    "Title": "Beet Jelly Recipe",
+    "Images": [
+      "https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_744,ar_5:4/v1/gk-static/gk/img/recipe-default-images/image-00.svg",
+      "https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_860,ar_3:2/v1/gk-static/gk/img/recipe-default-images/image-00.svg",
+      "https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_328,ar_4:3/v1/img/recipes/10/72/3/tPk6AEG6SAKyw2iIYccz_20181216_214859.jpg",
+      "https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_328,ar_4:3/v1/gk-static/gk/img/recipe-default-images/image-00.svg",
+      "https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_328,ar_4:3/v1/gk-static/gk/img/recipe-default-images/image-03.svg",
+      "https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_328,ar_4:3/v1/gk-static/gk/img/recipe-default-images/image-03.svg"
+    ],
+    "Items": [
+      {
+        "Instructions": [
+          "Wash 6-8 medium beets. Leave at least a 2\" stem on top and leave the bottom root. Boil until tender in enough water to cover beets. Remove beets and leave 3 cups of beet water in the pan.",
+          "Bring beet water to a boil.",
+          "Add Sure Jell and bring to a boil.",
+          "Add raspberry Jell-O and bring to a boil.",
+          "Add sugar and bring to a boil; boil for 5 minutes.",
+          "Put into sterile jars. Use paraffin to seal."
+        ],
+        "Ingredients": [
+          {
+            "One": "3 cups",
+            "Two": "beet water"
+          },
+          {
+            "One": "1 (3",
+            "Two": "ounce) package Sure-Jell"
+          },
+          {
+            "One": "1 (3",
+            "Two": "ounce) package raspberry Jell-O gelatin"
+          },
+          {
+            "One": "4 cups",
+            "Two": "granulated sugar"
+          }
+        ]
+      }
+    ]
+  }
 ]

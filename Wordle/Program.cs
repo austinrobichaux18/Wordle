@@ -233,7 +233,8 @@ class Program
     {
         keyboard = page.Keyboard;
         await page.GotoAsync("https://www.nytimes.com/games/wordle/index.html");
-        await page.ClickAsync(".close-icon");
+        await page.GetByTestId("Play").ClickAsync();
+        await page.GetByTestId("icon-close").ClickAsync();
 
         InitLists();
     }
