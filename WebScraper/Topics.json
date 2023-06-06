@@ -1,0 +1,62 @@
+[
+  {
+    "TopicUrl": "https://www.food.com/topic/savory",
+    "Topic": "savory",
+    "Title": "Savory Recipes ",
+    "IdeaUrls": [
+      "https://www.food.com/ideas/brisket-recipes-7041",
+      "https://www.food.com/ideas/mole-recipes-7034",
+      "https://www.food.com/ideas/cast-iron-skillet-recipes-7019",
+      "https://www.food.com/ideas/vegan-soup-recipes-7017",
+      "https://www.food.com/ideas/top-appetizer-recipes-7009",
+      "https://www.food.com/ideas/chicken-casserole-recipes-6999",
+      "https://www.food.com/ideas/pear-recipes-6987",
+      "https://www.food.com/ideas/best-ramen-recipes-6917"
+    ]
+  },
+  {
+    "TopicUrl": "https://www.food.com/topic/chicken",
+    "Topic": "chicken",
+    "Title": "Chicken Recipes ",
+    "IdeaUrls": [
+      "https://www.food.com/ideas/shredded-chicken-recipes-7108",
+      "https://www.food.com/ideas/chicken-and-mushroom-recipes-7105",
+      "https://www.food.com/ideas/instant-pot-chicken-breast-recipes-7061",
+      "https://www.food.com/ideas/keto-chicken-recipes-7059",
+      "https://www.food.com/ideas/chicken-crock-pot-recipes-7020",
+      "https://www.food.com/ideas/chicken-casserole-recipes-6999",
+      "https://www.food.com/ideas/best-recipes-with-premade-rotisserie-chicken-6864",
+      "https://www.food.com/ideas/chicken-casserole-recipes-with-egg-noodles-6858",
+      "https://www.food.com/ideas/best-recipes-chicken-thighs-grill-6842",
+      "https://www.food.com/ideas/recipes-chicken-thighs-legs-6840"
+    ]
+  },
+  {
+    "TopicUrl": "https://www.food.com/topic/sweet",
+    "Topic": "sweet",
+    "Title": "Sweet Recipes ",
+    "IdeaUrls": [
+      "https://www.food.com/ideas/thanksgiving-sweet-potato-recipes-7169",
+      "https://www.food.com/ideas/cookie-recipes-7152",
+      "https://www.food.com/ideas/flan-recipes-7092",
+      "https://www.food.com/ideas/valentine-cookie-recipes-7078",
+      "https://www.food.com/ideas/keto-dessert-recipes-7065"
+    ]
+  },
+  {
+    "TopicUrl": "https://www.food.com/topic/beef",
+    "Topic": "beef",
+    "Title": "Beef Recipes ",
+    "IdeaUrls": [
+      "https://www.food.com/ideas/keto-ground-beef-recipes-7066",
+      "https://www.food.com/ideas/best-beef-recipes-6922",
+      "https://www.food.com/ideas/healthy-ground-beef-recipes-low-carb-6855",
+      "https://www.food.com/ideas/best-macaroni-beef-recipes-6852",
+      "https://www.food.com/ideas/beef-stew-recipes-6731",
+      "https://www.food.com/recipe/best-beef-stroganoff-73922",
+      "https://www.food.com/recipe/szechuan-noodles-with-spicy-beef-sauce-48760",
+      "https://www.food.com/recipe/mahogany-beef-stew-80536",
+      "https://www.food.com/recipe/easy-enchiladas-beef-or-chicken-29884"
+    ]
+  }
+]
