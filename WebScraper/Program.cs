@@ -26,15 +26,15 @@ public class Program
         topics = JsonConvert.DeserializeObject<List<FoodTopic>>(await File.ReadAllTextAsync("C:\\Users\\arobi\\source\\repos\\Wordle\\WebScraper\\Topics.json"));
         ideas = JsonConvert.DeserializeObject<List<FoodIdea>>(await File.ReadAllTextAsync("C:\\Users\\arobi\\source\\repos\\Wordle\\WebScraper\\Ideas.json"));
         urls = ideas.SelectMany(x => x.RecipeUrls).ToList();
-        foreach (var item in oldResults.Select(x=> x.Url))
+        foreach (var item in oldResults.Select(x => x.Url))
         {
-            if(urls.Contains(item))
+            if (urls.Contains(item))
             {
                 urls.Remove(item);
             }
         }
 
-        var batchSize = 4;
+        var batchSize = 6;
         for (int i = 0; i < urls.ToList().Count() / batchSize; i++)
         {
             var tasks = new List<Task>();
@@ -48,23 +48,14 @@ public class Program
             {
                 if (results.Count > 0)
                 {
-                    //TODO NEXT RESTART THIS NEEDS TO PULL EXISTING FILE AND THEN UPDATE IT INSTEAD OF OVERWRITING
-                    File.WriteAllText("C:\\Users\\arobi\\source\\repos\\Wordle\\WebScraper\\Results.json", JsonConvert.SerializeObject(results));
+                    await WriteResultsToFileAsync(results);
+                    results = new List<Result>();
                 }
-                //if (topics.Count > 0)
-                //{
-                //     File.WriteAllText("C:\\Users\\arobi\\source\\repos\\Wordle\\WebScraper\\Topics.json", JsonConvert.SerializeObject(topics));
-                //}
-                //if (ideas.Count > 0)
-                //{
-                //    File.WriteAllText("C:\\Users\\arobi\\source\\repos\\Wordle\\WebScraper\\Ideas.json", JsonConvert.SerializeObject(ideas));
-                //}
             }
         }
         if (results.Count > 0)
         {
-            //TODO NEXT RESTART THIS NEEDS TO PULL EXISTING FILE AND THEN UPDATE IT INSTEAD OF OVERWRITING
-            File.WriteAllText("C:\\Users\\arobi\\source\\repos\\Wordle\\WebScraper\\Results.json", JsonConvert.SerializeObject(results));
+            await WriteResultsToFileAsync(results);
         }
         //if (topics.Count > 0)
         //{
@@ -74,6 +65,14 @@ public class Program
         //{
         //    File.WriteAllText("C:\\Users\\arobi\\source\\repos\\Wordle\\WebScraper\\Ideas.json", JsonConvert.SerializeObject(ideas));
         //}
+    }
+
+    private static async Task WriteResultsToFileAsync(List<Result> results)
+    {
+        var oldResults = JsonConvert.DeserializeObject<List<Result>>(await File.ReadAllTextAsync("C:\\Users\\arobi\\source\\repos\\Wordle\\WebScraper\\Results.json"));
+        await Task.Delay(1000);
+        oldResults.AddRange(results);
+        File.WriteAllText("C:\\Users\\arobi\\source\\repos\\Wordle\\WebScraper\\Results.json", JsonConvert.SerializeObject(oldResults));
     }
 
     private static string GetTime(Time lastTime, double thisTime)
@@ -124,22 +123,22 @@ public class Program
             {
                 Console.WriteLine($"Idea Page. ({index}) ({urls[index]})" + GetTime(time, timer.ElapsedMilliseconds));
 
-                idea.Title = title;
-                idea.IdeaUrl = result.Url;
-                idea.Idea = result.Url.Split("/").Last();
-                await GetParentCollectionAsync(page, idea, index, time, timer);
-                await GetOtherRecipeUrlsAsync(page, null, idea.RecipeUrls, index, time, timer);
-                ideas.Add(idea);
+                //idea.Title = title;
+                //idea.IdeaUrl = result.Url;
+                //idea.Idea = result.Url.Split("/").Last();
+                //await GetParentCollectionAsync(page, idea, index, time, timer);
+                //await GetOtherRecipeUrlsAsync(page, null, idea.RecipeUrls, index, time, timer);
+                //ideas.Add(idea);
             }
             else if (result.Url.Contains("/topic/"))
             {
                 Console.WriteLine($"Topic Page. ({index}) ({urls[index]})" + GetTime(time, timer.ElapsedMilliseconds));
 
-                topic.Title = title;
-                topic.TopicUrl = result.Url;
-                topic.Topic = result.Url.Split("/").Last();
-                await GetOtherRecipeUrlsAsync(page, null, topic.IdeaUrls, index, time, timer);
-                topics.Add(topic);
+                //topic.Title = title;
+                //topic.TopicUrl = result.Url;
+                //topic.Topic = result.Url.Split("/").Last();
+                //await GetOtherRecipeUrlsAsync(page, null, topic.IdeaUrls, index, time, timer);
+                //topics.Add(topic);
             }
             else if (result.Url.Contains("/recipe/"))
             {
