@@ -11,7 +11,7 @@ public class Program
     {
         //await using var browser = await playwright.Chromium.LaunchAsync(new BrowserTypeLaunchOptions
         //{
-        //    Headless = false,
+        //    Headless = false, 
         //});
 
         using var playwright = await Playwright.CreateAsync();
@@ -96,9 +96,9 @@ public class Program
             result.Items.Add(item);
             await GetImagesAsync(page, result, index, time, timer);
             await GetFactsAsync(page, result, index, time, timer);
-            results.Add(result);
 
-            await GetOtherRecipeUrlsAsync(page, urls, index, time, timer);
+            await GetOtherRecipeUrlsAsync(page, result, urls, index, time, timer);
+            results.Add(result);
 
             timer.Stop();
             Console.WriteLine($"Done ({index}): " + GetTime(time, timer.ElapsedMilliseconds));
@@ -111,17 +111,30 @@ public class Program
         }
         await page.CloseAsync();
     }
+    private static async Task GetNutritionInformationAsync(IPage page, List<string> urls, int index, Time time, Stopwatch timer)
+    {
 
-    private static async Task GetOtherRecipeUrlsAsync(IPage page, List<string> urls, int index, Time time, Stopwatch timer)
+    }
+    private static async Task GetOtherRecipeUrlsAsync(IPage page, Result result, List<string> urls, int index, Time time, Stopwatch timer)
     {
         Console.WriteLine($"Getting RecipeUrls ({index}): " + GetTime(time, timer.ElapsedMilliseconds));
         var aLocator = page.Locator("a");
+        var topicIndex = 0;
         for (int i = 0; i < await aLocator.CountAsync(); i++)
         {
             var recipeUrl = await aLocator.Nth(i).GetAttributeAsync("href");
             if (recipeUrl.StartsWith("https") && !recipeUrl.Contains("user") && recipeUrl.Contains("recipe") && !urls.Contains(recipeUrl))
             {
                 urls.Add(recipeUrl);
+            }
+            else if (recipeUrl == "/recipes")
+            {
+                topicIndex = i + 1;
+            }
+            else if (i == topicIndex)
+            {
+                result.TopicUrl = recipeUrl;
+                result.Topic = recipeUrl.Split("/").Last();
             }
         }
         Console.WriteLine($"Got RecipeUrls ({index}): " + GetTime(time, timer.ElapsedMilliseconds));
@@ -176,7 +189,7 @@ public class Program
         for (int i = 0; i < await valueLocator.CountAsync(); i++)
         {
             var label = await labelLocator.Nth(i).InnerTextAsync();
-            var value = (await valueLocator.Nth(i).InnerTextAsync()).Replace("\n","");
+            var value = (await valueLocator.Nth(i).InnerTextAsync()).Replace("\n", "");
             if (label == "Serves:")
             {
                 if (value.Contains("-"))
@@ -275,7 +288,8 @@ public class Program
         public string Title { get; set; }
         public List<string> Images { get; set; } = new List<string>();
         public List<Item> Items { get; set; } = new List<Item>();
-
+        public string TopicUrl { get; set; }
+        public string Topic { get; internal set; }
     }
     public class Item
     {
