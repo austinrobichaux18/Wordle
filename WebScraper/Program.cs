@@ -27,6 +27,7 @@ public class Program
                 Console.WriteLine("2: Get Recipe Data");
                 Console.WriteLine("3: Set Recipe Topics");
                 Console.WriteLine("4: Set Idea Tags");
+                Console.WriteLine("5: Get Root Db");
                 result = Int32.Parse(Console.ReadLine());
             }
             catch
@@ -47,12 +48,24 @@ public class Program
                 case 4:
                     await SetIdeaTagsAsync();
                     break;
+                case 5:
+                    await GetRootDbAsync();
+                    break;
                 default:
                     continue;
             }
-
-
         }
+    }
+    private static async Task GetRootDbAsync()
+    {
+        var recipes = JsonConvert.DeserializeObject<List<Recipe>>(await File.ReadAllTextAsync("C:\\Users\\arobi\\source\\repos\\Wordle\\WebScraper\\Results.json"));
+        var root = new Root
+        {
+            Full = recipes,
+            Samples = recipes.Take(20).ToList()
+        };
+
+        File.WriteAllText("C:\\Users\\arobi\\source\\repos\\Wordle\\WebScraper\\Root.json", JsonConvert.SerializeObject(root));
     }
     private static async Task SetIdeaTagsAsync()
     {
@@ -505,5 +518,10 @@ public class Program
         public string Topic { get; set; }
         public string Title { get; set; }
         public List<string> IdeaUrls { get; set; } = new List<string>();
+    }
+    public class Root
+    {
+        public List<Recipe> Samples { get; set; } = new List<Recipe>();
+        public List<Recipe> Full { get; set; } = new List<Recipe>();
     }
 }
