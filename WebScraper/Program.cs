@@ -17,6 +17,61 @@ public class Program
         using var playwright = await Playwright.CreateAsync();
         browser = await playwright.Webkit.LaunchAsync();
 
+        while (true)
+        {
+            int result = 0;
+            try
+            {
+                Console.WriteLine();
+                Console.WriteLine("1: End");
+                Console.WriteLine("2: Get Recipe Data");
+                Console.WriteLine("3: Set Recipe Topics");
+                result = Int32.Parse(Console.ReadLine());
+            }
+            catch
+            {
+                continue;
+            }
+
+            switch (result)
+            {
+                case 1:
+                    break;
+                case 2:
+                    await GetRecipeDataAsync();
+                    break;
+                case 3:
+                    await SetRecipeTopicsAsync();
+                    break;
+                default:
+                    continue;
+            }
+
+
+        }
+    }
+    private static async Task SetRecipeTopicsAsync()
+    {
+        var recipes = JsonConvert.DeserializeObject<List<Result>>(await File.ReadAllTextAsync("C:\\Users\\arobi\\source\\repos\\Wordle\\WebScraper\\Results.json"));
+        var topics = JsonConvert.DeserializeObject<List<FoodTopic>>(await File.ReadAllTextAsync("C:\\Users\\arobi\\source\\repos\\Wordle\\WebScraper\\Topics.json"));
+        var ideas = JsonConvert.DeserializeObject<List<FoodIdea>>(await File.ReadAllTextAsync("C:\\Users\\arobi\\source\\repos\\Wordle\\WebScraper\\Ideas.json"));
+
+        var topicsToIdeas = topics.ToDictionary(x => x.TopicUrl, y => y.IdeaUrls);
+        var ideasToRecipes = ideas.ToDictionary(x => x.IdeaUrl, y => y.RecipeUrls); //need to account for parents
+
+
+        foreach (var item in recipes.Where(x => string.IsNullOrWhiteSpace(x.TopicUrl)))
+        {
+            var idea = ideasToRecipes.First(x => x.Value.Contains(item.Url));
+            var topic = topicsToIdeas.FirstOrDefault(x => x.Value.Contains(idea.Key));
+            item.TopicUrl = topic.Key;
+            item.Topic = item.TopicUrl.Split("/").Last();
+        }
+
+        await WriteResultsToFileAsync(recipes);
+    }
+    private static async Task GetRecipeDataAsync()
+    {
         var urls = JsonConvert.DeserializeObject<List<string>>(await File.ReadAllTextAsync("C:\\Users\\arobi\\source\\repos\\Wordle\\WebScraper\\Urls.json"));
         var results = new List<Result>();
         var ideas = new List<FoodIdea>();

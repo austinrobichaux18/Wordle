@@ -1,8 +1,8 @@
 [
   {
     "TopicUrl": "https://www.food.com/topic/savory",
-    "Topic": "savory",
-    "Title": "Savory Recipes ",
+    "Topic": "Savory",
+    "Title": "Savory Recipes",
     "IdeaUrls": [
       "https://www.food.com/ideas/brisket-recipes-7041",
       "https://www.food.com/ideas/mole-recipes-7034",
@@ -16,8 +16,8 @@
   },
   {
     "TopicUrl": "https://www.food.com/topic/chicken",
-    "Topic": "chicken",
-    "Title": "Chicken Recipes ",
+    "Topic": "Chicken",
+    "Title": "Chicken Recipes",
     "IdeaUrls": [
       "https://www.food.com/ideas/shredded-chicken-recipes-7108",
       "https://www.food.com/ideas/chicken-and-mushroom-recipes-7105",
@@ -33,8 +33,8 @@
   },
   {
     "TopicUrl": "https://www.food.com/topic/sweet",
-    "Topic": "sweet",
-    "Title": "Sweet Recipes ",
+    "Topic": "Sweet",
+    "Title": "Sweet Recipes",
     "IdeaUrls": [
       "https://www.food.com/ideas/thanksgiving-sweet-potato-recipes-7169",
       "https://www.food.com/ideas/cookie-recipes-7152",
@@ -45,8 +45,8 @@
   },
   {
     "TopicUrl": "https://www.food.com/topic/beef",
-    "Topic": "beef",
-    "Title": "Beef Recipes ",
+    "Topic": "Beef",
+    "Title": "Beef Recipes",
     "IdeaUrls": [
       "https://www.food.com/ideas/keto-ground-beef-recipes-7066",
       "https://www.food.com/ideas/best-beef-recipes-6922",
