@@ -28,6 +28,7 @@ public class Program
                 Console.WriteLine("3: Set Recipe Topics");
                 Console.WriteLine("4: Set Idea Tags");
                 Console.WriteLine("5: Get Root Db");
+                Console.WriteLine("6: Fix Ingredients");
                 result = Int32.Parse(Console.ReadLine());
             }
             catch
@@ -51,6 +52,9 @@ public class Program
                 case 5:
                     await GetRootDbAsync();
                     break;
+                case 6:
+                    await FixIngredientsAsync();
+                    break;
                 default:
                     continue;
             }
@@ -59,6 +63,10 @@ public class Program
     private static async Task GetRootDbAsync()
     {
         var recipes = JsonConvert.DeserializeObject<List<Recipe>>(await File.ReadAllTextAsync("C:\\Users\\arobi\\source\\repos\\Wordle\\WebScraper\\Results.json"));
+        for (int i = 0; i < recipes.Count; i++)
+        {
+            recipes[i].Id = i + 1;
+        }
         var root = new Root
         {
             Full = recipes,
@@ -73,7 +81,7 @@ public class Program
         var topics = JsonConvert.DeserializeObject<List<FoodTopic>>(await File.ReadAllTextAsync("C:\\Users\\arobi\\source\\repos\\Wordle\\WebScraper\\Topics.json"));
         var ideas = JsonConvert.DeserializeObject<List<FoodIdea>>(await File.ReadAllTextAsync("C:\\Users\\arobi\\source\\repos\\Wordle\\WebScraper\\Ideas.json"));
 
-        var tags = ideas.ToDictionary(x=> x.IdeaUrl, x => Clean(x.Title));
+        var tags = ideas.ToDictionary(x => x.IdeaUrl, x => Clean(x.Title));
 
         var topicsToIdeas = topics.ToDictionary(x => x.TopicUrl, y => y.IdeaUrls);
         var ideasToRecipes = ideas.ToDictionary(x => x.IdeaUrl, y => y.RecipeUrls); //need to account for parents
@@ -137,16 +145,16 @@ public class Program
         var oldResults = JsonConvert.DeserializeObject<List<Recipe>>(await File.ReadAllTextAsync("C:\\Users\\arobi\\source\\repos\\Wordle\\WebScraper\\Results.json"));
         topics = JsonConvert.DeserializeObject<List<FoodTopic>>(await File.ReadAllTextAsync("C:\\Users\\arobi\\source\\repos\\Wordle\\WebScraper\\Topics.json"));
         ideas = JsonConvert.DeserializeObject<List<FoodIdea>>(await File.ReadAllTextAsync("C:\\Users\\arobi\\source\\repos\\Wordle\\WebScraper\\Ideas.json"));
-        urls = ideas.SelectMany(x => x.RecipeUrls).ToList();
-        foreach (var item in oldResults.Select(x => x.Url))
-        {
-            if (urls.Contains(item))
-            {
-                urls.Remove(item);
-            }
-        }
+        urls = new List<string> { "https://www.food.com/recipe/instant-pot-mongolian-braised-brisket-with-coconut-milk-537069" };
+        //foreach (var item in oldResults.Select(x => x.Url))
+        //{
+        //    if (urls.Contains(item))
+        //    {
+        //        urls.Remove(item);
+        //    }
+        //}
 
-        var batchSize = 6;
+        var batchSize = 1;
         for (int i = 0; i < urls.ToList().Count() / batchSize; i++)
         {
             var tasks = new List<Task>();
@@ -160,14 +168,14 @@ public class Program
             {
                 if (results.Count > 0)
                 {
-                    await WriteResultsToFileAsync(results);
+                    //await WriteResultsToFileAsync(results);
                     results = new List<Recipe>();
                 }
             }
         }
         if (results.Count > 0)
         {
-            await WriteResultsToFileAsync(results);
+            //await WriteResultsToFileAsync(results);
         }
         //if (topics.Count > 0)
         //{
@@ -257,7 +265,7 @@ public class Program
                 Console.WriteLine($"Recipe Page. ({index}) ({urls[index]})" + GetTime(time, timer.ElapsedMilliseconds));
                 result.Title = title.Replace("Recipe", "").Trim();
 
-                var item = new Item();
+                var item = new RecipeItem();
                 await GetInstructionsAsync(page, item, index, time, timer);
                 await GetIngredientsAsync(page, item, index, time, timer);
                 result.Items.Add(item);
@@ -367,7 +375,7 @@ public class Program
         }
     }
 
-    private static async Task GetInstructionsAsync(IPage page, Item item, int index, Time time, Stopwatch timer)
+    private static async Task GetInstructionsAsync(IPage page, RecipeItem item, int index, Time time, Stopwatch timer)
     {
         Console.WriteLine($"Getting Instructions ({index}): " + GetTime(time, timer.ElapsedMilliseconds));
         var instructionsElement = await page.WaitForSelectorAsync(".direction-list");
@@ -422,7 +430,7 @@ public class Program
         return int.Parse(string.Join("", str.Where(x => char.IsNumber(x))));
     }
 
-    private static async Task GetIngredientsAsync(IPage page, Item item, int index, Time time, Stopwatch timer)
+    private static async Task GetIngredientsAsync(IPage page, RecipeItem item, int index, Time time, Stopwatch timer)
     {
         Console.WriteLine($"Getting Ingredients ({index}): " + GetTime(time, timer.ElapsedMilliseconds));
         var ingredientElement = await page.WaitForSelectorAsync(".ingredient-list");
@@ -430,26 +438,43 @@ public class Program
         Console.WriteLine($"Got Ingredients ({index}): " + GetTime(time, timer.ElapsedMilliseconds));
         Console.WriteLine();
         var split = ingredients.Split("\n").Where(x => !string.IsNullOrWhiteSpace(x)).ToList();
-
-        for (int i = 0; i < split.Count / 2; i++)
+        SetIngredients(item, split);
+    }
+    public static async Task FixIngredientsAsync()
+    {
+        var recipes = JsonConvert.DeserializeObject<List<Recipe>>(await File.ReadAllTextAsync("C:\\Users\\arobi\\source\\repos\\Wordle\\WebScraper\\Results.json"));
+        foreach (var item in recipes)
+        {
+            SetIngredients(item.Items[0], item.Items[0].Ingredients.SelectMany(x => new string[] { x.One, x.Two }).Select(x => x).ToList());
+        }
+        await WriteResultsToFileAsync(recipes);
+    }
+    private static void SetIngredients(RecipeItem item, List<string> split)
+    {
+        foreach (var s in split)
         {
             item.Ingredients.Add(new DoubleString());
         }
-        if (split.Count % 2 == 1)
-        {
-            item.Ingredients.Add(new DoubleString());
-        }
 
+        int j = 0;
         for (int i = 0; i < split.Count; i++)
         {
-            var temp = item.Ingredients.First(x => string.IsNullOrWhiteSpace(x.One) || string.IsNullOrWhiteSpace(x.Two));
-            if (string.IsNullOrWhiteSpace(temp.One) && split.Count != i + 1)
+            var segment = item.Ingredients[j];
+            if (string.IsNullOrWhiteSpace(segment.One) && split[i].Count(x => char.IsLetter(x)) > 0)
             {
-                temp.One = split[i];
+                segment.Two = split[i];
+                j++;
+                continue;
+            }
+
+            if (string.IsNullOrWhiteSpace(segment.One))
+            {
+                segment.One = split[i];
             }
             else
             {
-                temp.Two = split[i];
+                segment.Two = split[i];
+                j++;
             }
         }
 
@@ -457,7 +482,7 @@ public class Program
         {
             {
                 var innerSplit = item.Ingredients[i].Two.Split(" ").ToList();
-                if (innerSplit.Count == 1)
+                if (innerSplit.Count == 1 || item.Ingredients[i].One == null)
                 {
                     continue;
                 }
@@ -475,20 +500,25 @@ public class Program
                 item.Ingredients[i].Two = string.Join(" ", innerSplit);
             }
         }
+        item.Ingredients = item.Ingredients.Where(x => !string.IsNullOrWhiteSpace(x.One) || !string.IsNullOrWhiteSpace(x.Two)).ToList();
     }
+
+
+
     public class Recipe
     {
+        public int Id { get; set; }
         public string Url { get; set; }
         public int Servings { get; set; }
         public int CookTimeMinutes { get; set; }
         public string Title { get; set; }
         public List<string> Images { get; set; } = new List<string>();
-        public List<Item> Items { get; set; } = new List<Item>();
+        public List<RecipeItem> Items { get; set; } = new List<RecipeItem>();
         public string TopicUrl { get; set; }
         public string Topic { get; set; }
         public string Tag1 { get; set; }
     }
-    public class Item
+    public class RecipeItem
     {
         public List<string> Instructions { get; set; } = new List<string>();
         public List<DoubleString> Ingredients { get; set; } = new List<DoubleString>();
