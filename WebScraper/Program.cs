@@ -74,6 +74,7 @@ public class Program
         };
 
         File.WriteAllText("C:\\Users\\arobi\\source\\repos\\Wordle\\WebScraper\\Root.json", JsonConvert.SerializeObject(root));
+        File.WriteAllText("C:\\Users\\arobi\\source\\repos\\Wordle\\WebScraper\\Sample.json", JsonConvert.SerializeObject(root.Samples));
     }
     private static async Task SetIdeaTagsAsync()
     {
@@ -451,6 +452,7 @@ public class Program
     }
     private static void SetIngredients(RecipeItem item, List<string> split)
     {
+        item.Ingredients = new List<DoubleString>();
         foreach (var s in split)
         {
             item.Ingredients.Add(new DoubleString());
@@ -459,6 +461,10 @@ public class Program
         int j = 0;
         for (int i = 0; i < split.Count; i++)
         {
+            if(split[i] == null)
+            {
+                continue;
+            }
             var segment = item.Ingredients[j];
             if (string.IsNullOrWhiteSpace(segment.One) && split[i].Count(x => char.IsLetter(x)) > 0)
             {
